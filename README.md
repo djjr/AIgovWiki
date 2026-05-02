@@ -95,3 +95,16 @@ git init          # if not already initialized
 git add -A
 git commit -m "ingest: my-article"
 ```
+
+### GitHub Pages
+
+To serve the web viewer from GitHub Pages, push the repo to GitHub and enable Pages (Settings → Pages → Deploy from branch: main). One required step: add a `.nojekyll` file to the repository root.
+
+```bash
+touch .nojekyll
+git add .nojekyll
+git commit -m "Disable Jekyll for GitHub Pages"
+git push
+```
+
+Without `.nojekyll`, GitHub Pages runs Jekyll, which processes `.md` files into HTML and serves them at extension-free URLs. The web viewer fetches files by their `.md` paths, so it gets 404s. The `.nojekyll` file switches Pages to plain static file serving, which is what the viewer needs.

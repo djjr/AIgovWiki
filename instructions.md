@@ -171,6 +171,8 @@ _The narrative below is from a **prior instance** of this wiki engine — a pers
 
 To start a new project wiki: copy this folder skeleton, clear the `raw/` directory, delete or archive `wiki/` content, edit the PROJECT CONTEXT section of `CLAUDE.md`, and open in a new Claude session. Claude will greet you with "Wiki has 3 pages. Last activity: [init]. What are we doing today?" and you are off.
 
+If you are hosting the web viewer on **GitHub Pages**, add a `.nojekyll` file to the repository root before (or immediately after) your first push. GitHub Pages runs Jekyll by default, which transforms `.md` files into HTML — the viewer fetches raw `.md` files by path and will get 404s without this file. `touch .nojekyll && git add .nojekyll && git commit -m "Disable Jekyll for GitHub Pages"` is all it takes.
+
 ---
 
 ## Quick reference
