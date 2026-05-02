@@ -1,0 +1,18 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Source documents — local only, not version-controlled
+raw/
+
+# Distribution archives
+ZIP/
+
+# Project template (active config is project-particulars.md)
+project-particulars-sample.md
+
+# Obsidian workspace settings
+.obsidian/
+
+# Node (if tooling is ever added)
+node_modules/
