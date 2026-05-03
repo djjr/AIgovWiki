@@ -17,6 +17,14 @@ CLAUDE.md is the generic wiki engine; project-particulars.md is the skin.
 <project-root>/
 ├── CLAUDE.md            ← this file (schema + instructions)
 ├── README.md            ← human-readable setup guide
+├── instructions.md      ← extended setup and workflow guide
+├── project-particulars.md ← project-specific config (see PROJECT CONTEXT above)
+├── index.html           ← web viewer entry point
+├── site.js              ← viewer logic
+├── site.css             ← viewer styles
+├── config.js            ← project-specific viewer settings (title, home slug)
+├── viewer.md            ← web viewer feature documentation
+├── .nojekyll            ← disables Jekyll on GitHub Pages (required)
 ├── raw/                 ← source documents (READ ONLY — never modify)
 │   ├── assets/          ← images, PDFs, attachments
 │   └── *.md             ← clipped articles, notes, transcripts
@@ -268,6 +276,25 @@ Do this silently at the start of every session:
 Then greet the user with a one-line status:
   "Wiki has N pages (D definitions, F findings, S sources). Last activity:
    [date + operation]. What are we doing today?"
+
+---
+
+## Web Viewer
+
+A static web viewer ships alongside the wiki. It serves the wiki as a
+navigable, searchable site without Obsidian.
+
+**To run locally:** `python3 -m http.server 8000` from the project root,
+then open `http://localhost:8000/`.
+
+**Project config:** `config.js` sets the site title, home slug, and subtitle.
+Edit it when adapting this for a new project.
+
+**Full feature documentation:** see `viewer.md`.
+
+**GitHub Pages:** push the repo and enable Pages (Settings → Pages → branch:
+main). The `.nojekyll` file in the root is required — without it, GitHub Pages
+runs Jekyll and the viewer cannot fetch `.md` files. See `viewer.md` for details.
 
 ---
 
