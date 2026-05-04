@@ -210,6 +210,7 @@ Workflow:
       add wikilinks where missing.
    f. Update wiki/index.md.
    g. Append to wiki/log.md.
+   h. Run `python3 generate-wiki-export.py` to refresh wiki/wiki-export.md.
 3. Report back:
    - Files processed
    - New pages created (by type)
