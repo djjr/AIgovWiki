@@ -16,3 +16,9 @@ project-particulars-sample.md
 
 # Node (if tooling is ever added)
 node_modules/
+
+# Local working files
+HTMLWIKIPARTS.zip
+Wiki Claude Query Feature Build Plan.md
+handoff-dan-ct-sb5-ingestion.md
+serve.command

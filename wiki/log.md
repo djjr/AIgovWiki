@@ -8,6 +8,73 @@ grep "^## \[" wiki/log.md | head -10
 
 ---
 
+## [2026-05-04] wiki-run | 2 new files — Ashby Workshop 2026 + Ball/Buchanan NYT op-ed
+
+- **Files processed (2):**
+  - `raw/2026 Ashby Workshop.pdf` (Fathom, Feb 2026 — 11-page convening report, Middleburg VA)
+  - `raw/A.I. Is a National Security Risk. We Aren't Doing Nearly Enough..md` (Ball & Buchanan, NYT Opinion, May 4, 2026)
+- **Source pages created (2):** ashby-workshop-2026, ball-buchanan-ai-national-security-2026
+- **Finding pages created (4):** ashby-trust-infrastructure-adoption-prerequisite, ashby-institutional-adaptation-dominant-constraint, frontier-cbrn-capability-threshold-reached, bipartisan-mandatory-ai-audits
+- **Index:** 181 → 187 pages total
+- **Notable findings:** (1) Ashby introduces insurance market pricing as a second IVO participation incentive alongside tort law — verified systems earn lower premiums; previously this wiki only had the rebuttable presumption mechanism; (2) Ball (Trump OSTP) + Buchanan (Biden White House) jointly call for Congress to mandate independent expert body audits of AI developer safety claims — bipartisan federal-level call for what is structurally equivalent to mandatory IVO regime; (3) Claude Mythos Preview has found thousands of previously unknown critical vulnerabilities; GPT-5.4 outperforms PhD virologists; Mythos matches experts in some bioweapons capabilities — first public insider documentation of frontier CBRN capability threshold being crossed; (4) Ashby cross-sector consensus: institutional adaptation, not technical capability, is now the primary bottleneck to responsible AI deployment
+- **Credibility note:** Ball-Buchanan CBRN claims are from a newspaper op-ed, not a technical paper; Buchanan disclosed as Anthropic adviser; treat as credible but not peer-reviewed evidence
+
+## [2026-05-02] wiki-run | 3 new files — Ohio HB 628 IVO bill, Utah/Washington provenance laws, Utah 2026 legislative session
+
+- **Files processed (3):**
+  - `raw/OHIO HB628_BILL ANALYSIS_27288.pdf` (Ohio LSC Bill Analysis — IVO licensing framework, introduced Dec 11, 2025)
+  - `raw/Analyzing Utah and Washington's New AI Provenance Laws.md` (JD Supra comparative table — UT/WA/CA content provenance)
+  - `raw/As White House blocks Utah AI bill, other chatbot and deepfake regulations advance • Utah News Dispatch.md` (Feb 26, 2026)
+- **File noted as integrated (1):** `raw/Version 2.0 of the "Artificial Intelligence Security Governance Framework"...md` — English CAC press release for Framework 2.0 already processed as the Chinese PDF; no new substantive content; no new source page created
+- **Source pages created (3):** ohio-hb628-2025, utah-washington-ai-provenance-laws, utah-ai-legislation-2026
+- **Finding pages created (3):** ohio-hb628-ivo-licensing-framework, state-content-provenance-laws-2026, white-house-preemption-pressure-state-ai
+- **Finding pages updated (1):** state-ai-legislation-2026-wave — added federal preemption/Utah episode; added related links
+- **Definition pages created (1):** digital-content-provenance
+- **Link scan:** connecticut-sb5-content-provenance updated with links to new multi-state finding and definition
+- **Index:** 174 → 181 pages total
+- **Notable findings:** (1) Ohio HB 628 is the third state IVO licensing statute and introduces a mandatory outcome-triggered revocation mechanism (verified model causes harm → AG must revoke) absent in Virginia SB 384 — a structurally distinct accountability approach with potential cascade risk; (2) four U.S. states (CT, UT, WA, CA) have now enacted or advanced AI content provenance requirements, constituting an emerging multi-state framework diverging on platform-layer obligations, device manufacturer duties, and enforcement; (3) White House letter calling Utah HB 286 "unfixable" is the first documented federal executive veto of state AI safety legislation — targeting a narrow behavioral restriction (safety plans/incident reporting), not a structural governance framework, which broadens the apparent scope of federal preemption pressure; (4) Utah HB 438 (Companion Chatbot Safety Act) advancing despite HB 286's death — hourly human-disclosure reminders for minors, prohibition on harmful content for minors — a distinct and narrower regulatory target than HB 286's accountability-of-developers approach
+
+## [2026-05-02] wiki-run | 4 Virginia + 1 Transparency Coalition files — IVO licensing, state legislative wave
+
+- **Files processed (4):**
+  - `raw/SB384SC1 - 2026 Regular Session.md` (Virginia Senate Committee Substitute — full IVO licensing framework)
+  - `raw/Fathom Applauds Governor Spanberger's Signing of Landmark AI Governance Legislation.md` (Fathom press release)
+  - `raw/PR Newswire Fathom Applauds Governor Spanberger's Signing of Landmark AI Governance Legislation.md` (PR Newswire version — substantively identical; integrated into Virginia source page)
+  - `raw/AI Legislative Update April 24, 2026 — Transparency Coalition. Legislation for Transparency in AI Now..md` (Transparency Coalition weekly tracker)
+- **Source pages created (2):** virginia-sb384-2026, transparency-coalition-legislative-update-april-2026
+- **Finding pages created (3):** virginia-sb384-ivo-licensing-framework, voluntary-ivo-design-tradeoff, state-ai-legislation-2026-wave
+- **Index:** 169 → 174 pages total
+- **Notable findings:** (1) Virginia SB 384 is the most operationally developed state IVO licensing statute yet enacted — 12 mandatory plan elements, advisory council with post-employment restrictions, 10-year document retention; (2) both CT §33 and VA SB 384 make participation explicitly voluntary — adverse selection risk identified as open governance design question; (3) Minnesota HF 4544 / SF 4636 and Ohio HB 628 introduce IVO licenses in the same session as Virginia's enactment, suggesting rapid legislative diffusion; (4) Florida's DeSantis AI Bill of Rights (SB 482) died in House — most significant 2026 comprehensive bill failure; (5) the 2026 state legislative wave shows political consensus runs to behavioral restrictions (chatbot safety, deepfakes, healthcare AI) rather than structural governance reform (IVO licensing, AI safety commissions)
+- **Version ambiguity noted:** SB384SC1 is the full operational IVO framework; Fathom press release describes signed bill as directing JCOTS to "evaluate the development of a framework for IVOs." Both positions documented in virginia-sb384-2026 source page.
+
+## [2026-05-02] wiki-run | 4 additional files — CT SB 5 Senate passage + China AI governance
+
+- **Files processed (4):**
+  - `raw/Amended AI bill passed by CT Senate after extensive questioning.md` (CT Mirror, April 21, 2026)
+  - `raw/Senate Passes Sweeping AI Mandates » CBIA.md` (employer-focused analysis)
+  - `raw/AI laws and regulation in China.md` (CMS Law, Feb 2026)
+  - `raw/《人工智能安全治理框架》2.0版.pdf` (CAC/CNCERT, Sept 2025 — Chinese language, processed with translation)
+- **Source pages created (3):** connecticut-sb5-senate-passage, china-ai-regulation-overview, china-ai-safety-governance-framework-2
+- **Finding pages created (5):** connecticut-sb5-content-provenance, china-three-tier-ai-risk-taxonomy, china-export-controls-as-ai-safety-risk, china-loss-of-control-acknowledgment, china-sectoral-ai-regulation-model
+- **Finding pages updated (1):** connecticut-sb5-aedt-disclosure — corrected AEDT effective date to Oct 1, 2027 (not 2026); added CBIA source
+- **Chinese PDF verdict:** Keep — substantial policy content; bilingual (Chinese body, English ToC); processed from Chinese
+- **Index:** 158 → 169 pages total
+- **Coverage gap addressed:** China domestic governance (previously flagged as a gap)
+- **Notable findings:** (1) China's Framework 2.0 explicitly names "Prevent Loss of Control" as Governance Principle 1.5 — first Chinese official document to do so; (2) §3.2.1(c) frames US chip export controls as an AI safety risk — mirror image of US framing; (3) Four AI governance models now documented: EU (comprehensive statute), US (deregulatory EO), China (sectoral measures), US states (CT SB 5 model); (4) CT SB 5 §15 content provenance requirement — first US state mandatory AI content provenance law
+
+## [2026-05-02] wiki-run | 4 new files — Connecticut SB 5 (2026)
+
+- **Files processed (4):**
+  - `raw/Connecticut SB 5 2026 Bill Text.pdf` (71-page Senate "A" Amendment)
+  - `raw/Connecticut SB 5 2026 OLR Bill Analysis.pdf` (OLR legislative analysis)
+  - `raw/Connecticut legislators pass sweeping AI bill.md` (Pluribus News)
+  - `raw/Connecticut passes AI regulations after years in development.md` (CT Mirror)
+- **Source pages created (2):** connecticut-sb5-2026, connecticut-sb5-news-coverage
+- **Finding pages created (5):** connecticut-sb5-legislative-narrowing, connecticut-sb5-frontier-whistleblower, connecticut-sb5-ivo-pilot, connecticut-sb5-aedt-disclosure, connecticut-sb5-ai-companion-framework
+- **Definition pages created (3):** ai-companion, automated-employment-decision-technology (acronym: AEDT), frontier-developer (CT SB 5)
+- **Index:** 148 → 158 pages total
+- **Notable findings:** (1) CT SB 5 is the first U.S. state statute to define "frontier developer" via a compute threshold (10²⁶ FLOPs), adopting the EU AI Act GPAI figure; (2) §2's "covered employee" definition is the first legislative encoding of deceptive alignment as a safety-relevant risk category; (3) §33 IVO pilot is the most direct legislative implementation of Hadfield's regulatory markets theory yet enacted; (4) the AEDT explanation requirement was removed at the governor's request — a textbook case of accountability trading during negotiation.
+
 ## [2026-05-02] wiki-run | 8 new files — procurement policy, democratic resilience, OECD government AI, TIAP 2026, CIFAR regulatory transformation, Rob Reich AISIs, Hadfield democratic deficit
 
 - **Files processed (8):**
