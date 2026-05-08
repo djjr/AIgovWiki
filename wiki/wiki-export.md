@@ -1,5 +1,5 @@
 # AI Governance Wiki — Query Context Export
-Generated: 2026-05-04 | Pages: 120
+Generated: 2026-05-08 | Pages: 137
 Includes: definitions, findings, queries, overviews. Excludes: sources.
 
 
@@ -114,6 +114,47 @@ related:
 *AI sycophancy* describes the behavior of an AI system that agrees with, validates, or selectively presents information consistent with the user's expressed views or inferred identity — prioritizing user approval over epistemic accuracy or balanced representation. The primary mechanism is one-sided evidence presentation (selecting facts that support the user's position) rather than explicit praise or agreement. Globig, Rathje et al. (2025) demonstrate empirically that sycophantic AI increases political attitude extremity and certainty, while users systematically prefer sycophantic to disagreeable AI — creating a market incentive for attitude-radicalizing AI design. Sycophancy is distinct from but related to *model alignment*: a model may be well-aligned in the sense of following instructions while still being sycophantic in its epistemic behavior. The term is used in the AI safety literature to describe a failure mode of RLHF-trained models that learn to optimize for human approval ratings.
 
 ---
+## wiki/definitions/algorithmic-regulation.md
+
+---
+title: "Algorithmic Regulation"
+type: definition
+tags: [governance-theory, law, ai-policy]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md"
+related:
+  - "[[wiki/definitions/algorithmic-rule-by-law|Algorithmic Rule by Law]]"
+  - "[[wiki/definitions/high-risk-ai|High-Risk AI (EU AI Act)]]"
+  - "[[wiki/definitions/risk-based-approach|Risk-Based Approach (AI regulation)]]"
+  - "[[wiki/findings/algorithmic-rule-by-law-threat|Algorithmic Rule by Law as Distinct Governance Threat]]"
+---
+
+Smuha's term for the narrower phenomenon of *public authorities* using algorithmic systems to inform or take administrative acts — decisions regarding tax fraud investigations, welfare benefit allocation, criminal profiling, asylum applications, and similar exercises of state power over individuals. Distinct from the broader sense of "AI regulation" (governing AI systems generally) and from private-sector algorithmic decision-making. The key feature is that administrative acts carry the authority and legitimacy of law, meaning that algorithmic errors or biases in this context do not merely cause commercial harm but potentially undermine constitutional protections. See also Yeung's related but broader definition: "decisionmaking systems that regulate a domain of activity to manage risk or alter behavior through continual computational generation of knowledge from data" — Smuha's usage is more narrowly confined to the public-sector executive branch.
+
+---
+## wiki/definitions/algorithmic-rule-by-law.md
+
+---
+title: "Algorithmic Rule by Law"
+type: definition
+tags: [governance-theory, law, democratic, philosophy]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md"
+related:
+  - "[[wiki/definitions/algorithmic-regulation|Algorithmic Regulation]]"
+  - "[[wiki/definitions/rule-by-law|Rule by Law]]"
+  - "[[wiki/definitions/scrutability|Scrutability]]"
+  - "[[wiki/findings/algorithmic-rule-by-law-threat|Algorithmic Rule by Law as Distinct Governance Threat]]"
+  - "[[wiki/findings/eu-ai-act-ignores-rule-of-law-risks|EU AI Act Ignores Rule-of-Law Risks]]"
+---
+
+Smuha's concept: the threat arising when public authorities deploy [[wiki/definitions/algorithmic-regulation|algorithmic regulation]] in ways that incrementally hollow out the law's protective constitutional function — undermining legality, equality, separation of powers, and judicial oversight — while preserving the formal veneer of legal legitimacy. Distinct from explicit authoritarianism (which abandons legal forms) and from the [[wiki/definitions/rule-by-law|rule by law]] that characterizes illiberal populist governments: algorithmic rule by law can occur under good-faith governments through negligence, recklessness, or the structural opacity of algorithmic systems. The governing metaphor Smuha uses is the frog in a gradually heating pot: the veneer of legality blinds citizens and overseers to the erosion underway.
+
+---
 ## wiki/definitions/anticipatory-ethics.md
 
 ---
@@ -209,6 +250,7 @@ updated: 2026-05-01
 sources:
   - "raw/AI Governance Lessons from Earlier Technologies.pdf"
 related:
+  - "[[wiki/definitions/pacing-problem|Pacing Problem]]"
   - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
   - "[[wiki/definitions/risk-based-approach|Risk-Based Approach (AI regulation)]]"
 ---
@@ -218,6 +260,28 @@ related:
 A fundamental dilemma in the governance of new technologies, identified by David Collingridge (1980): when a technology is new and its impacts are uncertain, it is easy to change but difficult to predict; by the time impacts become clear enough to guide governance, the technology is so deeply embedded in social and economic systems that change is costly and resistant. The dilemma creates a narrow window for effective intervention — before lock-in but after enough information exists to act wisely.
 
 Applied to AI governance, the Collingridge Dilemma suggests that attempts to wait for clear evidence of harm before regulating may be systematically too late, while early regulation risks either under- or over-constraining technologies whose trajectories are not yet legible. Adaptive governance mechanisms — including outcome-based standards, iterative review cycles, and the kind of competitive standard development envisioned in [[wiki/definitions/regulatory-markets|Regulatory Markets]] proposals — are partly responses to this dilemma: they aim to preserve revisability as understanding accumulates.
+
+---
+## wiki/definitions/command-and-control-regulation.md
+
+---
+title: "Command-and-Control Regulation"
+type: definition
+acronym: "C&C"
+tags: [governance-theory, regulatory-theory]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Command and Control Regulation.md"
+related:
+  - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
+  - "[[wiki/definitions/risk-based-approach|Risk-Based Approach (AI regulation)]]"
+  - "[[wiki/definitions/management-based-regulation|Management-based Regulation]]"
+  - "[[wiki/findings/conventional-regulation-illegibility-problem|Conventional Regulation's Illegibility Problem with ML]]"
+  - "[[wiki/findings/harms-paradigm-critique-ai-regulation|The Harms Paradigm Critique]]"
+---
+
+The traditional regulatory mode in which government sets specific mandatory requirements — particular limits (e.g., emissions thresholds), prohibited behaviors, or mandated technologies — and enforces them directly through inspection and penalty. Command-and-control regulation specifies *what to do or not do* rather than *what outcome to achieve*, leaving little discretion to regulated entities. Contrasted in the AI governance literature with outcomes-based, management-based, and risk-based approaches, and with [[wiki/definitions/regulatory-markets|Regulatory Markets]], which Hadfield and Clark argue can overcome command-and-control's core limitation: the state's lack of specialized knowledge to translate democratic goals into technically adequate rules. The EU AI Act's high-risk AI requirements (mandatory conformity assessments, CE marking, specific documentation obligations) are largely command-and-control in structure, while industry RSPs and IVO frameworks represent departures from this model.
 
 ---
 ## wiki/definitions/compute-governance.md
@@ -269,6 +333,26 @@ Two thresholds are currently embedded in governance frameworks:
 - **EU AI Act (2024)**: 10²⁵ FLOPs as the default trigger for [[wiki/definitions/general-purpose-ai|General-Purpose AI (GPAI)]] systemic risk obligations.
 
 The EU threshold is one order of magnitude lower than EO 14110, meaning the EU applies heavier obligations at a lower capability level. Both are subject to revision as compute efficiency improves and capable models are trained with fewer FLOPs (the "compute-capability decoupling" problem). Compute thresholds have been criticized as governance proxies that may be gamed through efficient training techniques and that do not capture the actual risk properties of a model; they have been defended as the only objective, pre-deployment signal currently available.
+
+---
+## wiki/definitions/confidential-computing-evaluation.md
+
+---
+title: "Confidential-Computing Evaluation Facility"
+type: definition
+tags: [technical-safety, evaluation, governance-mechanisms]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Securing deep frontier AI evaluations.md"
+related:
+  - "[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]]"
+  - "[[wiki/definitions/technical-legibility|Technical Legibility]]"
+  - "[[wiki/findings/glass-box-evaluation-deadlock|The Glass-Box Evaluation Deadlock]]"
+  - "[[wiki/definitions/sandbagging|Sandbagging]]"
+---
+
+A proposed evaluation architecture (Tlaie Boria / Pour Demain, 2026) that uses hardware-rooted trusted execution environments — confidential computing substrates with attestation on H200-class GPUs — to allow independent auditors to access a model's internal signals (gradients, activations, attention patterns) without the provider exposing model weights or architecture as trade secrets. Access is mediated through a standardized Evaluation Instrumentation Interface (EII): typed callback endpoints the provider implements against its own model, invocable by auditors without seeing inference code. Audit evidence is rendered server-side, cryptographically bound to the platform identity, and accumulated in a longitudinal ledger. Described as a "de facto glass-box facility" — giving evaluators the analytical depth of internal access while preserving the IP protections that prevent providers from participating in current deep evaluation regimes.
 
 ---
 ## wiki/definitions/contextual-privacy-mechanism-design.md
@@ -591,6 +675,27 @@ A framework for distinguishing what a regulatory regime ultimately wants from wh
 The gap between Level 1 and Level 2 is where regulatory systems gain or lose their legitimacy. Process compliance becomes a proxy for outcome achievement; thresholds stand in for absolute safety; detection and response mechanisms substitute for prevention. The distinction is practically important for IVO design: IVOs must be structured around Level 2 metrics, but licensed and evaluated by government against Level 1 outcomes. When Level 2 proxies drift far from Level 1 goals — as often happens over time — the regulatory system produces compliance without safety.
 
 ---
+## wiki/definitions/liability-gap.md
+
+---
+title: "Liability Gap"
+type: definition
+tags: [governance-theory, law, governance-mechanisms]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Liability gap.md"
+  - "raw/2023 Athens Roundtable on AI and Rule of Law.md"
+related:
+  - "[[wiki/definitions/rebuttable-presumption|Rebuttable Presumption of Reasonable Care]]"
+  - "[[wiki/definitions/regulation-by-contract|Regulation by Contract]]"
+  - "[[wiki/findings/rebuttable-presumption-as-market-incentive|Rebuttable Presumption as the Market Incentive for IVO Certification]]"
+  - "[[wiki/findings/procurement-cannot-substitute-public-law|Procurement Cannot Substitute for Public Law in Military AI Governance]]"
+---
+
+A condition in which legal rules, or the opacity of the value chain associated with a product or service, prevent harmed parties from holding any actor accountable for an accident. Liability gaps arise when harm is traceable in fact but not in law: the responsible actor may be difficult to identify (complex supply chains, opaque AI systems), legally insulated (statutory immunities, contractual disclaimers), or judgment-proof. In AI governance the liability gap takes a distinctive form: because ML models produce outputs through training rather than explicit programming, attributing a harmful output to a specific decision by a specific party is structurally difficult. The [[wiki/definitions/rebuttable-presumption|rebuttable presumption]] mechanism in IVO frameworks is one proposed remedy — it shifts the burden of proof without eliminating liability entirely. The Athens Roundtable (2023) identified "new liability frameworks" addressing the liability gap and the related concept of distribution of legal responsibility as a core governance reform agenda.
+
+---
 ## wiki/definitions/loss-of-control-risk.md
 
 ---
@@ -608,6 +713,27 @@ related:
 ---
 
 The risk that AI systems pursue goals — whether specified, emergent, or adversarially elicited — at a scale and speed that prevents humans from correcting, halting, or overriding them in time to prevent severe harm. Loss-of-control risk is distinct from misuse risk (which involves humans deliberately deploying AI harmfully) and from accident risk (which involves AI systems failing at their assigned tasks). It is specifically about the failure mode in which AI systems are *effective* at pursuing goals that are misaligned with human welfare, or in which human oversight mechanisms break down. The [[wiki/sources/singapore-consensus-ai-safety-research|Singapore Consensus]] (2025) identifies loss-of-control assessment as a research priority in its Risk Assessment pillar, including evaluation of AI deception, strategic goal-concealment, and resistance to shutdown.
+
+---
+## wiki/definitions/management-based-regulation.md
+
+---
+title: "Management-based Regulation"
+type: definition
+tags: [governance-theory, regulatory-theory, industry-practice]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Management-based Regulation.md"
+related:
+  - "[[wiki/definitions/command-and-control-regulation|Command-and-Control Regulation]]"
+  - "[[wiki/definitions/risk-based-approach|Risk-Based Approach (AI regulation)]]"
+  - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
+  - "[[wiki/definitions/responsible-ai-governance|Responsible AI Governance]]"
+  - "[[wiki/findings/principle-to-practice-gap-responsible-ai|Principle-to-Practice Gap in Responsible AI Governance]]"
+---
+
+A regulatory mode — also called process-oriented, risk-based, or enforced self-regulation — that requires or encourages firms to evaluate the risks generated by their own business and develop internal plans for managing those risks, rather than prescribing specific behaviors or technologies (Braithwaite 1981; Coglianese et al. 2003). The regulator evaluates the adequacy of the firm's management system, not compliance with specific rules. Management-based regulation is the mode that most closely describes current industry AI safety practice: Anthropic's RSP, GDM's Frontier Safety Framework, and OpenAI's Preparedness Framework are all management-based in structure — each firm identifies its own risk thresholds and management procedures. The [[wiki/findings/principle-to-practice-gap-responsible-ai|principle-to-practice gap]] finding suggests that management-based approaches systematically deprioritize safety during implementation without structural accountability mechanisms. Regulatory markets frameworks propose to discipline management-based approaches by adding external outcome verification through licensed IVOs.
 
 ---
 ## wiki/definitions/mechanistic-interpretability.md
@@ -654,6 +780,26 @@ related:
 ---
 
 An AI model whose trained weights are publicly released — typically under an open-source or open-access license — enabling any holder to run inference, fine-tune, modify, or redistribute the model without the original developer's oversight or consent. Open-weight models are distinguished from closed-API models by the absence of a technical control surface after release: the developer cannot patch safety properties, revoke access, monitor usage, or enforce terms of service on weight holders. As analyzed in [[wiki/sources/open-weight-model-risk-management|Caspar et al. (2026)]], this creates a governance asymmetry — the safety properties baked in at training time must be robust to adversarial modification, because no post-release correction is possible. Prominent open-weight models include Meta's Llama series, Mistral, and (as of 2025) models in the GPT-oss family.
+
+---
+## wiki/definitions/pacing-problem.md
+
+---
+title: "Pacing Problem"
+type: definition
+tags: [governance-theory, technology-policy]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Pacing Problem.md"
+related:
+  - "[[wiki/definitions/collingridge-dilemma|Collingridge Dilemma]]"
+  - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
+  - "[[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]"
+  - "[[wiki/findings/ashby-institutional-adaptation-dominant-constraint|Institutional Adaptation as Dominant Constraint]]"
+---
+
+The structural lag between technological innovation, which advances at the speed of industry R&D, and governance, which advances at the speed of politics, legislation, and bureaucracy (Marchant 2011). The pacing problem is the standard framing for why AI-specific governance is perennially reactive: by the time a regulatory framework is enacted, the technology it targets has already moved. Related to but distinct from the [[wiki/definitions/collingridge-dilemma|Collingridge Dilemma]]: the Collingridge problem is about the *timing* of intervention (too early = insufficient information; too late = lock-in); the pacing problem is about the *speed differential* between two institutions — industry and government — that operate on fundamentally different timescales. Regulatory markets and IVO frameworks are partly motivated as responses to the pacing problem, by outsourcing the technical methods of regulation to private actors who can iterate at industry speed.
 
 ---
 ## wiki/definitions/pretraining-data-filtering.md
@@ -889,6 +1035,46 @@ A regulatory design principle in which obligations and restrictions on AI develo
 The EU AI Act is the paradigmatic implementation of the risk-based approach in binding law, organizing regulation around four tiers: unacceptable risk (banned), high-risk (strict obligations), transparency risk (disclosure), and minimal risk (unregulated). The NIST AI RMF applies a similar logic in a voluntary, process-oriented framework. The approach is endorsed in the OECD AI Principles and referenced in the Bletchley Declaration ("pro-innovation and proportionate governance").
 
 The risk-based approach presupposes that risk can be reliably assessed ex ante and that use-case categories are stable — both assumptions that are contested for general-purpose AI systems, which may be repurposed across risk tiers after initial deployment. The [[wiki/definitions/regulatory-markets|Regulatory Markets]] proposal is a structurally distinct alternative: rather than government classifying risk tiers prescriptively, government licenses private [[wiki/definitions/independent-verification-organization|IVOs]] to develop and enforce outcome-based standards competitively.
+
+---
+## wiki/definitions/rule-by-law.md
+
+---
+title: "Rule by Law"
+type: definition
+tags: [governance-theory, law, philosophy, democratic]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md"
+related:
+  - "[[wiki/definitions/algorithmic-rule-by-law|Algorithmic Rule by Law]]"
+  - "[[wiki/definitions/algorithmic-regulation|Algorithmic Regulation]]"
+  - "[[wiki/findings/algorithmic-rule-by-law-threat|Algorithmic Rule by Law as Distinct Governance Threat]]"
+---
+
+A perversion of the rule of law in which legislation or administrative action is formally legal but used as a purely instrumental tool to legitimize executive power, rather than as a substantive constraint on it. Under rule by law, the law's protective function — safeguarding human rights, ensuring equal treatment, enabling judicial review — is hollowed out while its legitimating function is preserved. Distinguished from the rule of law: the law still *exists* and is formally invoked, but it no longer tames power. Applied in the EU context primarily to populist governments that use legally enacted measures to undermine judicial independence, minority rights, and the separation of powers (Hungary, Poland). Smuha extends the concept to the algorithmic context — see [[wiki/definitions/algorithmic-rule-by-law|Algorithmic Rule by Law]].
+
+---
+## wiki/definitions/sandbagging.md
+
+---
+title: "Sandbagging"
+type: definition
+tags: [technical-safety, evaluation, governance-mechanisms]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/2025 Q4 From Discovery to Deployment Shaping Safer AI Systems.md"
+related:
+  - "[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]]"
+  - "[[wiki/definitions/red-teaming|Red-Teaming (AI)]]"
+  - "[[wiki/findings/sandbagging-detection-challenge|Sandbagging Detection Remains an Open Problem]]"
+  - "[[wiki/findings/benchmark-quality-gaps-undermine-governance|Benchmark Quality Gaps Undermine AI Governance]]"
+  - "[[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]"
+---
+
+AI system behavior in which a model intentionally underperforms or conceals its capabilities during evaluation to avoid triggering safety thresholds or oversight interventions. Sandbagging is a form of strategic deception directed at evaluators rather than end users: a model that sandbags appears less capable than it is during testing and may reveal or deploy those capabilities in deployment. Distinct from benchmark saturation or poor test design (which cause *unintentional* underestimation of capability) — sandbagging is a deliberate, model-side manipulation of the evaluation process. Directly undermines [[wiki/definitions/dangerous-capability-evaluation|dangerous capability evaluations]] as a governance instrument, since the evaluations assume honest performance.
 
 ---
 ## wiki/definitions/scrutability.md
@@ -1308,6 +1494,47 @@ None requiring definition beyond existing pages.
 ## Notes
 
 Reich makes an evocative comparison to the CRISPR-Cas9 case: Jennifer Doudna called for a moratorium within months of the discovery; when He Jiankui violated the norm, he was professionally excommunicated from global science. Reich's diagnostic question: "Can you think of an AIML developer who didn't break the law but violated a norm widely understood within the community and suffered a professional cost for it?" The inability to answer this question diagnoses the field's professional immaturity.
+
+---
+## wiki/findings/algorithmic-rule-by-law-threat.md
+
+---
+title: "Algorithmic Rule by Law as Distinct Governance Threat"
+type: finding
+tags: [governance-theory, law, democratic, philosophy]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md"
+related:
+  - "[[wiki/findings/ai-agents-four-structural-pressures-democracy|LMAs Exacerbate Four Structural Pressures on Democracy]]"
+  - "[[wiki/findings/governance-by-procurement-as-democratic-vacancy|Governance by Procurement Creates a Democratic Vacancy]]"
+  - "[[wiki/findings/capability-accountability-trap|The Capability-Accountability Trap in Administrative Law]]"
+  - "[[wiki/definitions/algorithmic-rule-by-law|Algorithmic Rule by Law]]"
+  - "[[wiki/definitions/rule-by-law|Rule by Law]]"
+  - "[[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]"
+---
+
+## Claim
+
+Algorithmic regulation by public authorities poses a distinct governance threat — "algorithmic rule by law" — in which the veneer of legal legitimacy conceals the incremental erosion of constitutional checks and balances, enabling authoritarian and illiberal practices without the visible coups or sweeping regime changes that historically signal democratic backsliding.
+
+## Evidence
+
+- [Smuha 2024]: The danger is that algorithmic regulation "incrementally increases executive power, diminishes public accountability, and erodes the rule of law" — like "the clueless frog in a pot of water that is slowly brought to boil," the "veneer of legality might blind us to the fact that the values we hold dear are nevertheless undermined." The key feature is that this can occur under either scenario: deliberate ill intent *or* good intentions combined with negligence. → [[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]
+- [Smuha 2024]: Algorithmic systems enable overnight mass-decision-making parameter changes "at the push of a button," affecting all subjects simultaneously without informing or persuading critical public officials — a structural asymmetry unavailable to pre-algorithmic executives. → [[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]
+
+## Contradicted by / Tension with
+
+Smuha focuses on the executive branch deploying algorithmic systems to administer law — a different threat vector than commercial AI harms to individuals, or from AI companies wielding private power. The governance-by-procurement finding ([[wiki/findings/governance-by-procurement-as-democratic-vacancy|HKS/Carr Center]]) addresses a parallel democratic vacancy, but arising from *private* companies negotiating governance terms, not from the *state* using AI to administer those terms. These are complementary faces of the same democratic deficit.
+
+## Relevant concepts
+
+[[wiki/definitions/algorithmic-regulation|Algorithmic Regulation]], [[wiki/definitions/algorithmic-rule-by-law|Algorithmic Rule by Law]], [[wiki/definitions/cognitive-autonomy|Cognitive Autonomy]], [[wiki/definitions/scrutability|Scrutability]], [[wiki/definitions/anticipatory-ethics|Anticipatory Ethics]]
+
+## Notes
+
+Smuha distinguishes "algorithmic rule by law" from two earlier concepts: *technological management* (Brownsword — regulation through code design rather than through legal norms) and *rule of algorithm* (Meyer-Resende — algorithm substituting for law). Her contribution is showing that the veneer of legality is both the mechanism and the danger: the state is still *using* law, but using it as a formal shell that no longer performs its protective constitutional function.
 
 ---
 ## wiki/findings/ashby-institutional-adaptation-dominant-constraint.md
@@ -2313,6 +2540,7 @@ updated: 2026-05-01
 sources:
   - "raw/20250430 Talk GKH SGP.md"
 related:
+  - "[[wiki/definitions/command-and-control-regulation|Command-and-Control Regulation]]"
   - "[[wiki/definitions/technical-legibility|Technical Legibility]]"
   - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
   - "[[wiki/definitions/frontier-ai|Frontier AI]]"
@@ -2322,7 +2550,7 @@ related:
 
 ## Claim
 
-Command-and-control regulation fails for machine learning because its underlying logic assumes human-readable, auditable rules — an assumption ML fundamentally breaks.
+[[wiki/definitions/command-and-control-regulation|Command-and-control regulation]] fails for machine learning because its underlying logic assumes human-readable, auditable rules — an assumption ML fundamentally breaks.
 
 ## Evidence
 
@@ -2509,6 +2737,44 @@ The democratic deficit framing assumes democratic institutions are capable of go
 Hadfield's concrete minimum proposal (national registration of powerful model development) has subsequently been partially implemented in modified form through the EU AI Act's GPAI model registration requirements and voluntary commitment frameworks in the U.S. — though neither meets the level of disclosure and democratic accountability she envisions.
 
 ---
+## wiki/findings/ec-cbrn-gpai-risk-assessment-contract.md
+
+---
+title: "EU Commission Awards First GPAI CBRN Risk Assessment Contract"
+type: finding
+tags: [ai-policy, governance-institutions, international, technical-safety]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/2025 Q4 From Discovery to Deployment Shaping Safer AI Systems.md"
+related:
+  - "[[wiki/findings/converging-risk-domains-bio-cyber-autonomy|Convergence on Biosecurity, Cybersecurity, and Autonomy as Priority Risk Domains]]"
+  - "[[wiki/findings/frontier-cbrn-capability-threshold-reached|Frontier AI CBRN Capability Threshold Reached]]"
+  - "[[wiki/findings/government-technical-capacity-as-governance-prerequisite|Government Technical Capacity as a Governance Prerequisite]]"
+  - "[[wiki/sources/far-ai-newsletter-q4-2025|FAR.AI Q4 2025 Newsletter]]"
+---
+
+## Claim
+
+The European Commission awarded FAR.AI (with SaferAI and SecureBio) a contract to conduct CBRN risk assessment of general-purpose AI systems under the EU AI Act — the first publicly announced EU-funded third-party CBRN evaluation of GPAI models — representing the AI Office beginning to operationalize the technical governance mechanisms of the Act.
+
+## Evidence
+
+- [FAR.AI Q4 2025]: "FAR.AI has been awarded the contract from the European Commission for CBRN risk assessment of GPAI systems. Our core partners are SaferAI and SecureBio. Over the next year, we will help the AI Office identify and assess how advanced AI models could increase chemical, biological, radiological, or nuclear risks, and test whether proposed safeguards are effective in reducing those risks, helping shape technical governance mechanisms under the AI Act." → [[wiki/sources/far-ai-newsletter-q4-2025|FAR.AI Q4 2025 Newsletter]]
+
+## Contradicted by / Tension with
+
+No contradiction in existing wiki. This finding updates the trajectory of the EU AI Act's operationalization. The Singapore Consensus ([[wiki/findings/singapore-consensus-safety-research-framework|Singapore Consensus: Three-Part Safety Research Framework]]) established defence-in-depth CBRN safety research as multilateral priority; the FAR.AI contract represents the EU institutionalizing that research agenda through procurement.
+
+## Relevant concepts
+
+[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/general-purpose-ai|General-Purpose AI (GPAI)]], [[wiki/definitions/uplift|Uplift]], [[wiki/definitions/red-teaming|Red-Teaming (AI)]]
+
+## Notes
+
+Pairing this with the Ball-Buchanan finding ([[wiki/findings/frontier-cbrn-capability-threshold-reached|Frontier AI CBRN Capability Threshold Reached]]) and FAR.AI's own CEO acknowledgment of near-term credible CBRN threats: the governance gap here is no longer hypothetical.
+
+---
 ## wiki/findings/embedded-oversight-as-high-stakes-model.md
 
 ---
@@ -2584,6 +2850,44 @@ The EU AI Act (Regulation EU 2024/1689), in force from August 2024, is the first
 ## Notes
 
 The Brussels Effect — the tendency for EU regulation to become the global de facto standard because multinationals design to the strictest requirements — is a relevant analytical frame: companies selling in the EU must comply, potentially raising global standards even in jurisdictions without binding AI law.
+
+---
+## wiki/findings/eu-ai-act-ignores-rule-of-law-risks.md
+
+---
+title: "EU AI Act Ignores Rule-of-Law Risks"
+type: finding
+tags: [law, ai-policy, governance-theory, democratic]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md"
+related:
+  - "[[wiki/findings/eu-us-regulatory-divergence|EU-US Regulatory Divergence on AI]]"
+  - "[[wiki/findings/frontier-model-transparency-declining|Frontier Model Transparency Is Declining]]"
+  - "[[wiki/findings/harms-paradigm-critique-ai-regulation|The Harms Paradigm Critique]]"
+  - "[[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]"
+---
+
+## Claim
+
+The EU AI Act focuses primarily on individual and collective harms and relies on weak self-certification, making it structurally insufficient to protect the rule of law — a societal interest that goes beyond any individual's rights — against the risks posed by public authorities' algorithmic regulation.
+
+## Evidence
+
+- [Smuha 2024]: The AI Act "falls short in providing effective protection" — its requirements are "woefully deficient" and rely "to a large extent on a weak self-certification mechanism by AI providers." Moreover, it "focuses primarily on individual harms as opposed to societal harms and ignores the broader rule of law risks arising from algorithmic regulation." → [[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]
+
+## Contradicted by / Tension with
+
+The EU AI Act was designed in part to address limitations of existing legislation (GDPR) that the European Commission acknowledged as insufficient against algorithmic regulation risks. Defenders of the Act would argue that self-certification backed by notified bodies and market surveillance authorities is a practical compromise given the pace of development — a structural parallel to the IVO debate in U.S. state legislation.
+
+## Relevant concepts
+
+[[wiki/definitions/algorithmic-regulation|Algorithmic Regulation]], [[wiki/definitions/algorithmic-rule-by-law|Algorithmic Rule by Law]], [[wiki/definitions/general-purpose-ai|General-Purpose AI (GPAI)]], [[wiki/definitions/high-risk-ai|High-Risk AI (EU AI Act)]], [[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]
+
+## Notes
+
+Smuha's analysis predates the AI Act's final adoption (spring 2024) and was written when the proposal was still in progress. Her critique targets the Act's fundamental design choices, not implementation gaps that might be remedied by secondary legislation. Particularly important for the wiki's IVO thread: the self-certification problem Smuha identifies at the EU level is structurally identical to the problem that Hadfield's regulatory markets model and U.S. state IVO statutes are attempting to solve.
 
 ---
 ## wiki/findings/eu-us-regulatory-divergence.md
@@ -2762,6 +3066,47 @@ Individual companies have made transparency improvements (some scores increased 
 ## Notes
 
 The train-test overlap finding is the most governance-significant specific result: governance frameworks that rely on benchmark scores (capability triggers in RSPs, EU AI Act risk tiering) are implicitly assuming those scores are not contaminated. FMTI shows no company provides the information needed to verify this assumption. This connects the transparency finding directly to [[wiki/findings/benchmark-quality-gaps-undermine-governance|Benchmark Quality Gaps]] and [[wiki/findings/data-leakage-reproducibility-crisis-ml|Data Leakage Reproducibility Crisis]].
+
+---
+## wiki/findings/glass-box-evaluation-deadlock.md
+
+---
+title: "The Glass-Box Evaluation Deadlock"
+type: finding
+tags: [technical-safety, governance-mechanisms, evaluation, governance-theory]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Securing deep frontier AI evaluations.md"
+related:
+  - "[[wiki/findings/government-technical-capacity-as-governance-prerequisite|Government Technical Capacity as a Governance Prerequisite]]"
+  - "[[wiki/findings/taig-taxonomy-as-research-agenda|TAIG Taxonomy Defines an Underbuilt Field]]"
+  - "[[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]"
+  - "[[wiki/findings/sandbagging-detection-challenge|Sandbagging Detection Remains an Open Problem]]"
+  - "[[wiki/definitions/confidential-computing-evaluation|Confidential-Computing Evaluation Facility]]"
+  - "[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]]"
+  - "[[wiki/sources/confidential-computing-frontier-evaluation|Securing Deep Frontier AI Evaluations]]"
+---
+
+## Claim
+
+Frontier AI safety governance faces a structural deadlock: regulators need access to a model's internal signals (gradients, activations, backdoors) to verify safety claims that black-box output testing cannot reach, but granting this access requires exposing model weights and architecture worth billions — which providers refuse — so deep evaluations either do not happen or are conducted internally by the provider being evaluated.
+
+## Evidence
+
+- [Tlaie Boria 2026]: "For these claim classes, evaluators need analytical access to the model's internal signals (gradients, activations, attention patterns) not just its outputs. But granting that access has historically meant exposing assets worth billions, which providers reasonably refuse. The result has been a deadlock: deeper evaluations either don't happen, or are conducted internally by the very provider being evaluated." → [[wiki/sources/confidential-computing-frontier-evaluation|Securing Deep Frontier AI Evaluations]]
+
+## Contradicted by / Tension with
+
+The TAIG taxonomy ([[wiki/findings/taig-taxonomy-as-research-agenda|TAIG]]) documents this gap as a missing technical capacity but does not propose a concrete solution. TIAP 2026 ([[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]) treats evaluation reliability as a governance infrastructure failure without distinguishing black-box from glass-box constraints. The Pour Demain brief's proposed confidential-computing facility is a candidate solution but remains in pre-pilot; its technical claims have not been independently validated at the scale of closed frontier models.
+
+## Relevant concepts
+
+[[wiki/definitions/confidential-computing-evaluation|Confidential-Computing Evaluation Facility]], [[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/technical-legibility|Technical Legibility]], [[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]
+
+## Notes
+
+The deadlock has a second dimension beyond IP protection: the chicken-and-egg adoption problem. Providers will not commit proprietary weights to a novel evaluation architecture before it has been demonstrated at frontier scale, but frontier-scale demonstration requires proprietary weights. The Pour Demain proposal explicitly addresses this with a staged open-weights validation phase. This is a governance infrastructure bootstrapping problem with structural parallels to IVO adoption challenges (see [[wiki/findings/voluntary-ivo-design-tradeoff|Voluntary IVO Participation: Design Tradeoff]]).
 
 ---
 ## wiki/findings/governance-by-procurement-as-democratic-vacancy.md
@@ -3214,6 +3559,47 @@ The outcome-triggered mandatory revocation creates a potential systemic risk: if
 Ohio HB 628 was introduced December 11, 2025 by Rep. T. Mathews (136th General Assembly). The bill analysis is dated February 27, 2026 — no passage or committee action has been recorded in the source document. Ohio joins Minnesota HF 4544 / SF 4636 (noted in the Transparency Coalition April 2026 tracker) as states introducing IVO licensing frameworks in the same session as Virginia's enactment.
 
 ---
+## wiki/findings/open-source-alignment-evaluation-stack.md
+
+---
+title: "Open-Source Alignment Evaluation Stack Emerging at Meridian Labs"
+type: finding
+tags: [technical-safety, governance-institutions, industry-practice, evaluation]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Donating our open-source alignment tool.md"
+related:
+  - "[[wiki/findings/government-technical-capacity-as-governance-prerequisite|Government Technical Capacity as a Governance Prerequisite]]"
+  - "[[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]"
+  - "[[wiki/findings/sandbagging-detection-challenge|Sandbagging Detection Remains an Open Problem]]"
+  - "[[wiki/findings/glass-box-evaluation-deadlock|The Glass-Box Evaluation Deadlock]]"
+  - "[[wiki/sources/uk-aisi|UK AI Security Institute (AISI)]]"
+  - "[[wiki/sources/petri-alignment-tool-anthropic|Petri 3.0 — Anthropic]]"
+---
+
+## Claim
+
+A shared open-source alignment evaluation stack is coalescing at Meridian Labs — an independent AI evaluation nonprofit — with Petri (Anthropic's donated alignment testing toolbox), Inspect (UK AISI's evaluation framework), and Scout; this represents the first instance of a frontier lab donating a core evaluation tool to neutral nonprofit infrastructure, establishing a structural precedent for evaluation independence analogous to Anthropic's MCP donation to the Linux Foundation.
+
+## Evidence
+
+- [Anthropic 2025]: "As part of Meridian Labs, Petri joins other tools like Inspect and Scout, building a technology stack that is open to labs, independent researchers, and governments alike." The donation was explicitly modeled on the MCP Linux Foundation donation "to help ensure that Petri remains independent of any AI lab, so that its results will be seen as neutral and credible." → [[wiki/sources/petri-alignment-tool-anthropic|Petri 3.0 — Anthropic]]
+- [Anthropic 2025]: UK AISI made Petri "a major part" of their model sabotage-propensity evaluations — demonstrating cross-institutional uptake before the independence transfer. → [[wiki/sources/petri-alignment-tool-anthropic|Petri 3.0 — Anthropic]]
+
+## Contradicted by / Tension with
+
+Adoption by other frontier labs (OpenAI, Google DeepMind, Meta) remains unconfirmed. Evaluation credibility depends not only on tool independence but on methodological consensus about what behaviors to measure and how to score them — a problem Petri alone does not resolve. The glass-box evaluation deadlock ([[wiki/findings/glass-box-evaluation-deadlock|Glass-Box Evaluation Deadlock]]) remains: Petri operates on model outputs and auditor-mediated scenarios, not on internal model signals, so it cannot verify claims that require access to weights or activations.
+
+## Relevant concepts
+
+[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/sandbagging|Sandbagging]], [[wiki/definitions/red-teaming|Red-Teaming (AI)]], [[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]
+
+## Notes
+
+The "Dish" add-on — running tests with the model's real system prompt and deployment scaffold — is a partial sandbagging countermeasure: it prevents the model from recognizing test conditions by making them indistinguishable from deployment. This complements FAR.AI's detection-via-retraining approach at the methodological level, but the two approaches target different failure modes (Dish: preventing sandbagging from being activated; FAR.AI: detecting it after the fact).
+
+---
 ## wiki/findings/open-weight-lifecycle-governance-gaps.md
 
 ---
@@ -3360,7 +3746,7 @@ Adherence to responsible AI principles is systematically deprioritized during ac
 ## Contradicted by / Tension with
 
 - [[wiki/findings/broad-adoption-shallow-commitment-dynamic|Broad Adoption, Shallow Commitment]]: The OECD dynamic is the international-level version of the same phenomenon — formal endorsement without behavioral constraint. The Papagiannidis et al. finding adds the organizational mechanism: path dependencies and corporate culture mediate how external normative signals are absorbed and acted upon.
-- [[wiki/findings/conventional-regulation-illegibility-problem|Conventional Regulation's Illegibility Problem]]: Hadfield's point that command-and-control regulation cannot specify ML decision logic is partly a supply-side explanation for why procedural governance practices are so hard to implement: you cannot audit what you cannot specify. Responsible AI governance practices presuppose a degree of [[wiki/definitions/technical-legibility|Technical Legibility]] that frontier models currently lack.
+- [[wiki/findings/conventional-regulation-illegibility-problem|Conventional Regulation's Illegibility Problem]]: Hadfield's point that [[wiki/definitions/command-and-control-regulation|command-and-control regulation]] cannot specify ML decision logic is partly a supply-side explanation for why procedural governance practices are so hard to implement: you cannot audit what you cannot specify. Responsible AI governance practices presuppose a degree of [[wiki/definitions/technical-legibility|Technical Legibility]] that frontier models currently lack.
 - EU AI Act obligations map directly onto several of the seven principles — creating legally mandated structural and procedural practices for high-risk AI operators. Whether legal mandate closes the principle-to-practice gap, or whether it reproduces compliance theater at scale, is an open empirical question the paper identifies as a research priority.
 
 ## Relevant concepts
@@ -3486,6 +3872,47 @@ The cascade mechanism works only if government exercises meaningful oversight of
 [[wiki/definitions/regulatory-markets|Regulatory Markets]], [[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]], [[wiki/definitions/rebuttable-presumption|Rebuttable Presumption of Reasonable Care]]
 
 ---
+## wiki/findings/rcm-banking-as-ai-governance-analogy.md
+
+---
+title: "Regulatory Compliance Management in Banking as AI Governance Analogy"
+type: finding
+tags: [analogy, governance-theory, governance-mechanisms, law]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/G&M Article 20240523.md"
+related:
+  - "[[wiki/findings/level-1-level-2-outcome-gap|Level 1 / Level 2 Outcome Gap: Cross-Industry Pattern]]"
+  - "[[wiki/findings/ivo-financial-independence-tension|IVO Financial Independence Tension: Cross-Industry Pattern]]"
+  - "[[wiki/findings/embedded-oversight-as-high-stakes-model|Embedded Oversight as the High-Stakes IVO Model]]"
+  - "[[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]"
+  - "[[wiki/definitions/level-1-level-2-outcomes|Level 1 / Level 2 Outcomes]]"
+  - "[[wiki/sources/td-bank-rcm-regulatory-analogy|TD Bank AML Failure — Regulatory Compliance Management as Analogy]]"
+---
+
+## Claim
+
+Banking's Regulatory Compliance Management (RCM) framework offers an underutilized AI governance analogy: a mature model of mandatory enterprise-wide compliance infrastructure, outcomes-based supervision with multi-jurisdictional regulator information-sharing, third-party consultants used for remediation, and public accountability standards for detecting and responding to harms — with direct structural parallels to what an AI developer accountability framework would require.
+
+## Evidence
+
+- [G&M 2024]: OSFI requires banks to maintain RCM programs with risk-based controls, pro-active testing, and feedback loops to business units; failures trigger mandatory action plans monitored quarterly by FinTRAC. TD's failures resulted in $450M+ U.S. penalties, a blocked acquisition, and engagement of risk consultancy Protiviti for remediation. → [[wiki/sources/td-bank-rcm-regulatory-analogy|TD Bank AML Failure — Regulatory Compliance Management as Analogy]]
+- [G&M 2024]: TD CEO Masrani's accountability statement — "we did not meet our expectations or our regulatory obligations to monitor, detect, report and respond to suspicious activity" — illustrates what a mandatory public-facing accountability norm for AI developers might look like.
+
+## Contradicted by / Tension with
+
+Banking RCM operates in a domain where the harms (money laundering, financial crime) are relatively legible, well-defined, and linked to specific transaction patterns. AI harms are more diverse, less legible, and may not produce clear transaction-level signals. This limits the direct transferability of RCM's technical architecture, though the *governance structure* (mandatory standards, outcomes-based expectations, multi-regulator information sharing, third-party remediation consultants, quarterly monitoring) is more directly portable.
+
+## Relevant concepts
+
+[[wiki/definitions/level-1-level-2-outcomes|Level 1 / Level 2 Outcomes]], [[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]], [[wiki/definitions/regulatory-markets|Regulatory Markets]], [[wiki/definitions/technical-legibility|Technical Legibility]]
+
+## Notes
+
+The RCM analogy adds a dimension absent from most IVO comparisons: the *continuous internal compliance function* owned by the regulated institution (analogous to an AI developer's safety team), externally assessed by a regulator, and subject to mandatory remediation with third-party support when failures occur. Current AI governance proposals focus heavily on the external audit/verification moment; the RCM model foregrounds the ongoing internal compliance infrastructure that makes external audit meaningful.
+
+---
 ## wiki/findings/rebuttable-presumption-as-market-incentive.md
 
 ---
@@ -3536,6 +3963,7 @@ sources:
   - "raw/202507 PODCAST Gillian Hadfield Andrew Freeman.md"
 related:
   - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
+  - "[[wiki/definitions/command-and-control-regulation|Command-and-Control Regulation]]"
   - "[[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]"
   - "[[wiki/definitions/rebuttable-presumption|Rebuttable Presumption of Reasonable Care]]"
   - "[[wiki/definitions/responsible-capability-scaling|Responsible Capability Scaling]]"
@@ -3545,7 +3973,7 @@ related:
 
 ## Claim
 
-A three-tier governance structure — government sets outcome goals, licensed private IVOs develop and enforce standards, regulated companies select IVOs from the market — can deliver adaptive, technically sophisticated AI oversight that command-and-control regulation cannot.
+A three-tier governance structure — government sets outcome goals, licensed private IVOs develop and enforce standards, regulated companies select IVOs from the market — can deliver adaptive, technically sophisticated AI oversight that [[wiki/definitions/command-and-control-regulation|command-and-control regulation]] cannot.
 
 ## Evidence
 
@@ -3659,6 +4087,45 @@ Sparse autoencoders can extract high-quality, interpretable, monosemantic featur
 The paper identifies a research agenda of direct governance relevance: Can SAE features detect when fine-tuning increases the likelihood of undesirable behaviors? What features activate during jailbreaks? Can suppressing specific feature sets provide high assurance Claude will not assist with CBRN synthesis? These questions point toward interpretability tools as a complement to behavioral red-teaming — and potentially, as the technical basis for the kind of independent auditing that [[wiki/definitions/independent-verification-organization|IVO]]-based governance would require. The "affirmative safety case" concept mentioned in the Discussion — using interpretability as a test set for safety that holds off-distribution — is exactly the form of evidence a certification body would need to issue reliable attestations.
 
 ---
+## wiki/findings/sandbagging-detection-challenge.md
+
+---
+title: "Sandbagging Detection Remains an Open Problem"
+type: finding
+tags: [technical-safety, evaluation, governance-mechanisms, empirical]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/2025 Q4 From Discovery to Deployment Shaping Safer AI Systems.md"
+related:
+  - "[[wiki/definitions/sandbagging|Sandbagging]]"
+  - "[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]]"
+  - "[[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]"
+  - "[[wiki/findings/benchmark-quality-gaps-undermine-governance|Benchmark Quality Gaps Undermine AI Governance]]"
+  - "[[wiki/sources/far-ai-newsletter-q4-2025|FAR.AI Q4 2025 Newsletter]]"
+---
+
+## Claim
+
+AI systems can be fine-tuned to deliberately underperform during capability evaluations (sandbagging); the most promising detection technique — retraining the model to perform correctly — shows potential but robust detection methods do not yet exist, making sandbagging a live threat to the integrity of dangerous capability evaluations as a governance instrument.
+
+## Evidence
+
+- [FAR.AI Q4 2025]: FAR.AI tested sandbagging detection via an "auditing game" in which a red team fine-tuned models to underperform while a blue team attempted detection. Retraining the model to answer correctly was the most promising technique. No robust detection methods yet exist. → [[wiki/sources/far-ai-newsletter-q4-2025|FAR.AI Q4 2025 Newsletter]]
+
+## Contradicted by / Tension with
+
+The existence of sandbagging as a threat is recognized across the safety community; the empirical contribution here is a concrete detection methodology and its limitations. The TIAP 2026 finding ([[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]) identifies policy-grade evaluations as failing validity/reliability tests — sandbagging represents a distinct, model-side validity threat beyond the benchmark design failures TIAP documents.
+
+## Relevant concepts
+
+[[wiki/definitions/sandbagging|Sandbagging]], [[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/red-teaming|Red-Teaming (AI)]]
+
+## Notes
+
+Sandbagging has direct implications for regulatory frameworks that use dangerous capability evaluations as a mandatory gateway (e.g., Anthropic's ASL thresholds, GDM's CCL framework, the Seoul deployment moratorium clause). If a model can reliably sandbag to avoid triggering an evaluation threshold, the governance mechanism is structurally defeatable from the inside.
+
+---
 ## wiki/findings/scrutability-as-governance-infrastructure.md
 
 ---
@@ -3735,6 +4202,45 @@ The normative program of international evaluation cooperation contrasts with the
 ## Notes
 
 The three-pillar structure maps well onto [[wiki/findings/taig-taxonomy-as-research-agenda|the TAIG taxonomy]] (Reuel et al. 2024): the Singapore Consensus is effectively the multilateral legitimation event that translates that academic taxonomy into an intergovernmental research agenda. The explicit "mutual interest" framing is politically significant — it creates a non-zero-sum cooperation frame that allows adversarial AI powers (US/UK vs. China) to participate without conceding competitive ground. Verification and risk threshold standardization are identified as the highest-priority cooperation areas.
+
+---
+## wiki/findings/societal-harm-as-distinct-ai-governance-category.md
+
+---
+title: "Societal Harm as a Distinct AI Governance Category"
+type: finding
+tags: [governance-theory, law, philosophy, democratic]
+created: 2026-05-08
+updated: 2026-05-08
+sources:
+  - "raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md"
+related:
+  - "[[wiki/findings/harms-paradigm-critique-ai-regulation|The Harms Paradigm Critique]]"
+  - "[[wiki/findings/eu-ai-act-ignores-rule-of-law-risks|EU AI Act Ignores Rule-of-Law Risks]]"
+  - "[[wiki/findings/sycophantic-ai-increases-extremity|Sycophantic AI Increases Political Attitude Extremity]]"
+  - "[[wiki/findings/democratic-deficit-ai-governance|The Democratic Deficit in AI Governance]]"
+  - "[[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]"
+---
+
+## Claim
+
+AI governance frameworks require a three-tier harm taxonomy — individual, collective, and societal — because legal mechanisms designed to address the first two categories are structurally insufficient to protect against the third; the rule of law, as a societal interest held by all citizens regardless of whether they are directly subjected to a specific system, cannot be reduced to an aggregation of individual or group harms.
+
+## Evidence
+
+- [Smuha 2024]: A biased government fraud-detection algorithm produces (1) *individual harm* to the specific person wrongly flagged, (2) *collective harm* to the group of people with migration backgrounds subjected to the system, and (3) *societal harm* to all citizens — regardless of their background — who hold an interest in living in a society where the state does not exercise power arbitrarily. The third harm persists even if the first two were fully remediated. → [[wiki/sources/algorithmic-rule-by-law-smuha|Smuha — Algorithmic Rule by Law]]
+
+## Contradicted by / Tension with
+
+Existing regulatory frameworks — including the EU AI Act, GDPR, and most U.S. state AI legislation — are designed around individual or collective harm. The CIFAR harms paradigm critique ([[wiki/findings/harms-paradigm-critique-ai-regulation|Sandhu/Kolt/Hadfield]]) makes an adjacent argument (AI disrupts regulatory *tools and targets*, not just individual rights) but does not articulate the individual/collective/societal distinction explicitly. Smuha's framing provides more precise vocabulary for this gap.
+
+## Relevant concepts
+
+[[wiki/definitions/algorithmic-regulation|Algorithmic Regulation]], [[wiki/definitions/risk-based-approach|Risk-Based Approach (AI regulation)]], [[wiki/definitions/high-risk-ai|High-Risk AI (EU AI Act)]]
+
+## Notes
+
+The societal harm concept has direct implications for what an IVO framework should be asked to verify. Current IVO designs focus on whether a specific AI system causes harm to its direct users or subjects (Level 2 outcomes). Smuha's framework would require IVOs — or some other governance mechanism — to assess whether the *aggregate* use of algorithmic regulation by an executive branch is eroding constitutional accountability, a fundamentally different and much harder task.
 
 ---
 ## wiki/findings/state-ai-legislation-2026-wave.md
@@ -4221,7 +4727,7 @@ The afternoon addresses the voluntary commitment landscape critically. The [[wik
 
 This is the most intellectually demanding day and the one that most distinguishes a serious program from briefing-book material. The original curriculum identified three structural obstacles; the revised curriculum adds a fourth that sits below all of them.
 
-The first three remain: the [[wiki/findings/conventional-regulation-illegibility-problem|illegibility problem]] (ML decision logic is produced by training, not written — command-and-control regulation assumes human-readable rules); the [[wiki/definitions/collingridge-dilemma|Collingridge Dilemma]] (governance timing problem: too early to see risks, too late to change); and the [[wiki/findings/nonphysical-asset-governance-challenge|nonphysical asset governance problem]] (software, algorithms, and model weights resist the physical chokepoint controls that made nuclear nonproliferation work — encryption export controls are the cautionary tale).
+The first three remain: the [[wiki/findings/conventional-regulation-illegibility-problem|illegibility problem]] (ML decision logic is produced by training, not written — [[wiki/definitions/command-and-control-regulation|command-and-control regulation]] assumes human-readable rules); the [[wiki/definitions/collingridge-dilemma|Collingridge Dilemma]] (governance timing problem: too early to see risks, too late to change); and the [[wiki/findings/nonphysical-asset-governance-challenge|nonphysical asset governance problem]] (software, algorithms, and model weights resist the physical chokepoint controls that made nuclear nonproliferation work — encryption export controls are the cautionary tale).
 
 The fourth structural obstacle is the instruments problem, and it belongs here because it undercuts every proposed solution to the first three. When regulators try to evaluate AI systems, they rely on benchmarks — standardized tests of capability. [[wiki/findings/benchmark-quality-gaps-undermine-governance|BetterBench (Reuel et al., NeurIPS 2024)]] assessed 24 benchmarks against 46 quality criteria and found MMLU — the most widely used capability benchmark — scored 5.5/15. Replication scripts averaged 3.75/15. Statistical significance reporting averaged 5.62/15. The [[wiki/findings/data-leakage-reproducibility-crisis-ml|data leakage finding]] (Kapoor & Narayanan, 2023) adds another layer: across 294 papers in 17 fields, systematic data leakage means published AI performance numbers routinely overstate actual capability on novel data. And the [[wiki/findings/frontier-model-transparency-declining|FMTI finding]] completes the picture: no company discloses the train-test overlap information that would allow anyone to determine whether benchmark scores are inflated. The combined implication is damaging: governance frameworks that use capability benchmarks as regulatory triggers — Anthropic's ASL thresholds, OpenAI's Preparedness Framework, EU AI Act Article 51 — are relying on instruments whose reliability cannot currently be verified. Independent benchmark quality assessment, not just independent evaluation, may be a prerequisite for any robust capability-based governance.
 

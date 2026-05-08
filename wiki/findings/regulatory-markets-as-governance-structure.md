@@ -9,6 +9,7 @@ sources:
   - "raw/202507 PODCAST Gillian Hadfield Andrew Freeman.md"
 related:
   - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
+  - "[[wiki/definitions/command-and-control-regulation|Command-and-Control Regulation]]"
   - "[[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]"
   - "[[wiki/definitions/rebuttable-presumption|Rebuttable Presumption of Reasonable Care]]"
   - "[[wiki/definitions/responsible-capability-scaling|Responsible Capability Scaling]]"
@@ -18,7 +19,7 @@ related:
 
 ## Claim
 
-A three-tier governance structure — government sets outcome goals, licensed private IVOs develop and enforce standards, regulated companies select IVOs from the market — can deliver adaptive, technically sophisticated AI oversight that command-and-control regulation cannot.
+A three-tier governance structure — government sets outcome goals, licensed private IVOs develop and enforce standards, regulated companies select IVOs from the market — can deliver adaptive, technically sophisticated AI oversight that [[wiki/definitions/command-and-control-regulation|command-and-control regulation]] cannot.
 
 ## Evidence
 

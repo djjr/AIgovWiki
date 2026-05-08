@@ -7,6 +7,7 @@ updated: 2026-05-01
 sources:
   - "raw/20250430 Talk GKH SGP.md"
 related:
+  - "[[wiki/definitions/command-and-control-regulation|Command-and-Control Regulation]]"
   - "[[wiki/definitions/technical-legibility|Technical Legibility]]"
   - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
   - "[[wiki/definitions/frontier-ai|Frontier AI]]"
@@ -16,7 +17,7 @@ related:
 
 ## Claim
 
-Command-and-control regulation fails for machine learning because its underlying logic assumes human-readable, auditable rules — an assumption ML fundamentally breaks.
+[[wiki/definitions/command-and-control-regulation|Command-and-control regulation]] fails for machine learning because its underlying logic assumes human-readable, auditable rules — an assumption ML fundamentally breaks.
 
 ## Evidence
 

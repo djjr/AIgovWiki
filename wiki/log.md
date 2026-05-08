@@ -8,6 +8,31 @@ grep "^## \[" wiki/log.md | head -10
 
 ---
 
+## [2026-05-08] lint | stub-notes glossarization assessment
+
+- **Stubs assessed:** ~28 files in raw/ with Obsidian-style tags (type/moc, type/concept)
+- **Overlap with existing definitions confirmed (no action):** Red Teaming, dual-use, Regulatory Markets, Outcomes, Technical Deficit, Democratic Deficit — all already covered
+- **New definition pages created (4):** pacing-problem, command-and-control-regulation, liability-gap, management-based-regulation
+- **Link scan:** added first-mention wikilinks to command-and-control-regulation in 5 existing wiki pages (conventional-regulation-illegibility-problem, regulatory-markets-as-governance-structure, principle-to-practice-gap, hadfield-talk-regulatory-markets, congressional-staffer-bootcamp); added pacing-problem cross-link to collingridge-dilemma
+- **Held for future action:** vertical/horizontal regulation, data poisoning (thin stubs; terms don't yet appear in body text); Athens Roundtable + US Senate AI WG (no ingestible source documents available)
+- **Index:** 212 → 216 pages total
+
+## [2026-05-08] wiki-run | 5 new files — Smuha/Algorithmic Rule By Law, FAR.AI Q4 2025, TD Bank RCM analogy, Frontier Eval Confidential Computing, Petri 3.0
+
+- **Files processed (5):**
+  - `raw/Introduction (Chapter 1) - Algorithmic Rule By Law.md` (Smuha, Cambridge UP — book chapter introduction)
+  - `raw/2025 Q4 From Discovery to Deployment Shaping Safer AI Systems.md` (FAR.AI Q4 2025 newsletter)
+  - `raw/G&M Article 20240523.md` (Globe & Mail, TD Bank AML/RCM failure, DJR-annotated governance analogy)
+  - `raw/Securing deep frontier AI evaluations.md` (Tlaie Boria / Pour Demain — confidential computing evaluation proposal)
+  - `raw/Donating our open-source alignment tool.md` (Anthropic — Petri 3.0 donation to Meridian Labs)
+- **Noted (no new source page):** Fathom/PR Newswire Spanberger press releases already integrated in virginia-sb384-2026 source page
+- **Source pages created (5):** algorithmic-rule-by-law-smuha, far-ai-newsletter-q4-2025, td-bank-rcm-regulatory-analogy, confidential-computing-frontier-evaluation, petri-alignment-tool-anthropic
+- **Finding pages created (9):** eu-ai-act-ignores-rule-of-law-risks, algorithmic-rule-by-law-threat, societal-harm-as-distinct-ai-governance-category, sandbagging-detection-challenge, ec-cbrn-gpai-risk-assessment-contract, rcm-banking-as-ai-governance-analogy, glass-box-evaluation-deadlock, open-source-alignment-evaluation-stack
+- **Definition pages created (5):** algorithmic-regulation, algorithmic-rule-by-law, rule-by-law, sandbagging, confidential-computing-evaluation
+- **Index:** 187 → 212 pages total
+- **Notable findings:** (1) Smuha introduces "algorithmic rule by law" — a distinct threat in which public-sector algorithmic regulation hollows out constitutional checks under a veneer of legality; her three-tier harm taxonomy (individual/collective/societal) provides vocabulary for a gap in existing governance frameworks including the EU AI Act; (2) sandbagging (deliberate capability concealment during evaluation) is now empirically documented with partial detection methods but no robust solution — directly undermines dangerous capability evaluation as a governance instrument; (3) FAR.AI's EC CBRN contract is the first publicly announced EU-funded third-party GPAI CBRN evaluation, operationalizing the AI Act; (4) Pour Demain's confidential-computing evaluation proposal addresses the glass-box evaluation deadlock — evaluators need model internals, providers refuse to expose weights, result is provider self-assessment; (5) Anthropic donated Petri to Meridian Labs, joining Inspect and Scout in an emerging open-source alignment evaluation stack; (6) TD Bank RCM analogy adds enterprise-wide continuous compliance infrastructure as an underutilized governance model for AI developers
+- **Cross-links added:** sandbagging links to dangerous-capability-evaluation, glass-box-evaluation-deadlock; algorithmic-rule-by-law links to democratic-deficit, capability-accountability-trap, harms-paradigm-critique; RCM analogy links to level-1-level-2-outcomes and IVO findings
+
 ## [2026-05-04] wiki-run | 2 new files — Ashby Workshop 2026 + Ball/Buchanan NYT op-ed
 
 - **Files processed (2):**

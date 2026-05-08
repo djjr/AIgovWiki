@@ -7,6 +7,7 @@ updated: 2026-05-01
 sources:
   - "raw/AI Governance Lessons from Earlier Technologies.pdf"
 related:
+  - "[[wiki/definitions/pacing-problem|Pacing Problem]]"
   - "[[wiki/definitions/regulatory-markets|Regulatory Markets]]"
   - "[[wiki/definitions/risk-based-approach|Risk-Based Approach (AI regulation)]]"
 ---
