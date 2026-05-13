@@ -1,5 +1,5 @@
 # AI Governance Wiki — Query Context Export
-Generated: 2026-05-08 | Pages: 137
+Generated: 2026-05-13 | Pages: 149
 Includes: definitions, findings, queries, overviews. Excludes: sources.
 
 
@@ -21,6 +21,27 @@ related:
 ---
 
 AI systems that autonomously plan and execute sequences of actions — calling external tools, reading and writing to memory, browsing the web, writing and running code, or interacting with other AI agents — in order to complete multi-step tasks with limited per-step human oversight. Agentic AI systems differ from single-turn chatbots in that they operate over extended time horizons, take actions with real-world consequences, and may be granted elevated system permissions. The term is used broadly to cover both single-agent systems (one model, many tool calls) and multi-agent pipelines (multiple specialized models delegating subtasks to each other). As analyzed in [[wiki/sources/securing-agentic-ai|CSA Singapore / FAR.AI (2025)]], the agentic architecture introduces a new cybersecurity threat surface — including prompt injection, memory poisoning, and tool abuse — that has no direct analog in conventional software or single-turn LLM security.
+
+---
+## wiki/definitions/ai-assurance-level.md
+
+---
+title: "AI Assurance Level (AAL)"
+type: definition
+acronym: "AAL"
+tags: [auditing, frontier-ai, governance-mechanisms, technical-safety, evaluation]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Frontier AI Auditing.pdf"
+related:
+  - "[[wiki/definitions/frontier-ai-auditing|Frontier AI Auditing]]"
+  - "[[wiki/definitions/ai-safety-levels-asl|AI Safety Levels (ASL) — Anthropic]]"
+  - "[[wiki/findings/ai-assurance-levels-framework|Four AI Assurance Levels (AALs): A Maturity Roadmap for Frontier AI Auditing]]"
+  - "[[wiki/findings/glass-box-evaluation-deadlock|The Glass-Box Evaluation Deadlock]]"
+---
+
+A four-tier maturity framework for [[wiki/definitions/frontier-ai-auditing|frontier AI auditing]], proposed by Brundage et al. (2026), describing the depth of access and rigor achievable by third-party assessors at different stages of institutional development. AAL-1 (Limited): API-level access, achievable now. AAL-2 (Moderate): gray-box access with partial model internals, near-term goal. AAL-3 (High): white-box access with full model weights and training pipelines, target approximately 2027. AAL-4 (Very High): continuous monitoring with treaty-grade verification and deployment-level visibility, target late 2027+. Distinct from Anthropic's [[wiki/definitions/ai-safety-levels-asl|ASL (AI Safety Levels)]], which describe thresholds in model capability risk; AALs describe thresholds in auditor assessment capability.
 
 ---
 ## wiki/definitions/ai-companion.md
@@ -500,6 +521,27 @@ related:
 Bommasani et al. (Stanford CRFM, first edition 2023; annual thereafter): the *Foundation Model Transparency Index* (FMTI) is a structured annual assessment of AI developer transparency across 100 indicators spanning upstream (training data composition, data sources, compute, labor practices), model (capabilities, limitations, evaluation methodology), and downstream (deployment terms, usage policies, documented societal impact) dimensions. Each indicator is binary (disclosed / not disclosed) and independently verified. The FMTI is the primary longitudinal empirical instrument for tracking voluntary transparency norms among frontier AI developers; its declining average (37 in 2023 → 40 in 2nd edition → 40 in 3rd edition with new low-scoring entrants pulling the mean to 40) provides evidence on whether market or reputational incentives are sufficient to drive transparency without regulatory mandate.
 
 ---
+## wiki/definitions/frontier-ai-auditing.md
+
+---
+title: "Frontier AI Auditing"
+type: definition
+tags: [auditing, frontier-ai, third-party-assessment, governance-mechanisms, technical-safety]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Frontier AI Auditing.pdf"
+related:
+  - "[[wiki/definitions/ai-assurance-level|AI Assurance Level (AAL)]]"
+  - "[[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]]"
+  - "[[wiki/definitions/red-teaming|Red-Teaming (AI)]]"
+  - "[[wiki/findings/frontier-ai-auditing-seven-gaps|Seven Dimensions Where Frontier AI Auditing Falls Short]]"
+  - "[[wiki/findings/ai-assurance-levels-framework|Four AI Assurance Levels (AALs)]]"
+---
+
+Rigorous third-party assessment of frontier AI companies' safety and security practices, comprising two distinct functions: (1) **evaluation** — testing model behavior and organizational practices against relevant standards, and (2) **verification** — confirming the accuracy of safety and security claims made by the developer. Both functions require deep, secure access to non-public information (model weights, training pipelines, internal evaluations, organizational governance) that goes beyond what is achievable through API access or voluntary developer disclosure. Defined and operationalized in Brundage et al. (2026); distinguished from evaluations (which may be conducted without this access level) and from red-teaming (which addresses specific capability subsets without organizational-level scope). The four-tier [[wiki/definitions/ai-assurance-level|AI Assurance Level]] framework describes the progression from currently achievable limited assessments to treaty-grade continuous monitoring.
+
+---
 ## wiki/definitions/frontier-ai.md
 
 ---
@@ -648,6 +690,25 @@ A privately operated, government-licensed firm whose business model is auditing 
 IVOs are distinguished from existing voluntary auditors by their formal licensing relationship with government: a licensed IVO's certification confers legal benefits (rebuttable presumption of reasonable care, insurance eligibility) on certified developers. This liability-linked licensing creates a market incentive to seek rigorous rather than permissive certification. Cross-industry precedents include Nationally Recognized Testing Laboratories (NRTLs, e.g. UL), EU Notified Bodies, PCAOB-registered audit firms, USDA-accredited organic certifiers, FAA Designated Engineering Representatives (DERs), and maritime Classification Societies — all private entities licensed by government to perform regulatory functions in their respective domains.
 
 ---
+## wiki/definitions/investor-stewardship.md
+
+---
+title: "Investor Stewardship"
+type: definition
+tags: [investors, investor-stewardship, esg, governance-mechanisms, ai-governance]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/The-Role-of-Investors-in-AI-Governance-Oxford-AIGI-FINAL-130426.pdf"
+related:
+  - "[[wiki/findings/investor-ai-governance-barriers|Investor Barriers to AI Governance Engagement]]"
+  - "[[wiki/findings/investor-stewardship-investment-team-split|Investor Stewardship vs. Investment Team: Structural Split in AI Governance]]"
+  - "[[wiki/definitions/responsible-ai-governance|Responsible AI Governance]]"
+---
+
+The function within institutional asset managers (pension funds, sovereign wealth funds, large mutual funds) responsible for ESG engagement, proxy voting, and board-level governance dialogue with portfolio companies — as distinct from investment teams, which handle stock selection and financial analysis. Stewardship teams exercise governance influence through three primary instruments: engaging directly with company boards and management on governance issues, voting proxies at annual general meetings (including against management on governance failures), and filing or supporting shareholder resolutions. In the AI governance context (Fitzjohn-Sykes / Oxford AIGI, 2026), stewardship teams are the primary investor channel for pushing board-level AI oversight improvements at portfolio companies, but are structurally hampered by thin AI technical expertise and lack of shared AI governance evaluation frameworks. The stewardship/investment team distinction is central to understanding why investor leverage on AI risk is largely latent rather than activated.
+
+---
 ## wiki/definitions/level-1-level-2-outcomes.md
 
 ---
@@ -694,6 +755,26 @@ related:
 ---
 
 A condition in which legal rules, or the opacity of the value chain associated with a product or service, prevent harmed parties from holding any actor accountable for an accident. Liability gaps arise when harm is traceable in fact but not in law: the responsible actor may be difficult to identify (complex supply chains, opaque AI systems), legally insulated (statutory immunities, contractual disclaimers), or judgment-proof. In AI governance the liability gap takes a distinctive form: because ML models produce outputs through training rather than explicit programming, attributing a harmful output to a specific decision by a specific party is structurally difficult. The [[wiki/definitions/rebuttable-presumption|rebuttable presumption]] mechanism in IVO frameworks is one proposed remedy — it shifts the burden of proof without eliminating liability entirely. The Athens Roundtable (2023) identified "new liability frameworks" addressing the liability gap and the related concept of distribution of legal responsibility as a core governance reform agenda.
+
+---
+## wiki/definitions/lone-wolf-epidemic-terrorism.md
+
+---
+title: "Lone Wolf Epidemic Terrorism"
+type: definition
+tags: [biosecurity, dual-use, bioterrorism, risk-assessment, threat-model]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Dual-Use_AI_Capabilities_and_the_Risk_of_Bioterrorism.pdf"
+related:
+  - "[[wiki/definitions/uplift|Uplift]]"
+  - "[[wiki/definitions/dual-use-foundation-model|Dual-Use Foundation Model]]"
+  - "[[wiki/findings/lone-wolf-bioterrorism-probability-ai-uplift|AI Uplift Could Substantially Raise Lone Wolf Bioterrorism Probability]]"
+  - "[[wiki/findings/capability-to-risk-conversion-framework|Framework: Converting Capability Evaluations to Bioterrorism Risk Assessments]]"
+---
+
+A specific bioterrorism threat model, scoped by Righetti (GovAI, 2025), referring to the scenario where individual actors or very small groups (without state support or institutional infrastructure) attempt to engineer epidemic-scale pathogens and release them to cause mass casualties. Characterized by three distinct technical barriers that currently make such attacks very unlikely: virus discovery (identifying epidemic-potential pathogens), laboratory synthesis (acquiring the skills to produce them), and operational attack planning (executing a release while evading law enforcement and DNA synthesis screening). Explicitly excludes state-sponsored biological weapons programs and non-epidemic attacks (e.g., anthrax-class), which have different barrier structures and require separate risk analysis. Central to Righetti's capability-to-risk conversion framework, which quantifies how AI [[wiki/definitions/uplift|uplift]] across these barriers could shift attack probability.
 
 ---
 ## wiki/definitions/loss-of-control-risk.md
@@ -1261,6 +1342,60 @@ Lazar & Cuéllar explicitly reject the strong forms of the disinformation threat
 ## Notes
 
 The four-pressure taxonomy is methodologically important: it resists technological determinism (LMAs don't create these problems from scratch; they interact with pre-existing structural vulnerabilities) and saliency bias (the actual democratic risk is less about AI's dramatic capabilities and more about its interaction with mundane structural weaknesses in contemporary democracies).
+
+---
+## wiki/findings/ai-assurance-levels-framework.md
+
+---
+title: "Four AI Assurance Levels (AALs): A Maturity Roadmap for Frontier AI Auditing"
+type: finding
+tags: [auditing, frontier-ai, ai-assurance-levels, governance-mechanisms, technical-safety, third-party-assessment]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Frontier AI Auditing.pdf"
+related:
+  - "[[wiki/findings/frontier-ai-auditing-seven-gaps|Seven Dimensions Where Frontier AI Auditing Falls Short of Mature Assurance Regimes]]"
+  - "[[wiki/definitions/frontier-ai-auditing|Frontier AI Auditing]]"
+  - "[[wiki/definitions/ai-assurance-level|AI Assurance Level (AAL)]]"
+  - "[[wiki/findings/glass-box-evaluation-deadlock|The Glass-Box Evaluation Deadlock]]"
+  - "[[wiki/sources/iaseai-workshop-ivo-cross-industry|IASEAI Workshop — IVOs in Other Regulatory Domains]]"
+---
+
+## Claim
+
+Frontier AI auditing capability can be organized into four AI Assurance Levels (AALs) representing a maturity roadmap from currently achievable limited assessments (AAL-1) through treaty-grade continuous monitoring (AAL-4), with AAL-3 representing the practical near-term governance target and achievable by approximately 2027 given appropriate institutional investment.
+
+## Evidence
+
+- [Brundage et al., January 2026, 28 co-authors]: Proposed as a structuring framework for the field; draws analogy to assurance levels in nuclear, financial, and aviation auditing. → [[wiki/sources/brundage-2026-frontier-ai-auditing|Brundage et al. 2026]]
+
+## The Four Levels
+
+**AAL-1 (Limited Assurance)** — *Achievable now*
+Access: API-level plus limited non-public documentation. Methods: behavioral testing, limited interviews, policy review. This is the current frontier of what third-party evaluators can achieve. Examples: most existing red-teaming engagements, AI safety audits by boutique firms. Key limitation: cannot verify what the model actually does inside; can only observe outputs.
+
+**AAL-2 (Moderate Assurance)** — *Near-term goal, months to years*
+Access: Gray-box — partial model internals, more extensive documentation, some direct collaboration with developer teams. Methods: limited interpretability analysis, training process review, structured access to internal evaluations. This is what most published "audit" proposals envision when they use the term. Requires institutional trust relationships between auditors and developers.
+
+**AAL-3 (High Assurance)** — *~2027 target*
+Access: White-box — full model weights, full training pipelines, complete documentation, unrestricted technical collaboration. Methods: comprehensive evaluation of capabilities, alignment properties, information security, organizational governance. This is what meaningful regulatory assurance requires. Requires substantial auditor technical infrastructure (compute for model analysis, interpretability tooling, secure computation environments like the [[wiki/definitions/confidential-computing-evaluation|confidential-computing evaluation facility]] model). The [[wiki/findings/open-source-alignment-evaluation-stack|Petri/Inspect/Scout open-source alignment stack]] is part of the infrastructure buildout for this level.
+
+**AAL-4 (Very High Assurance)** — *~Late 2027+*
+Access: Continuous monitoring, deployment visibility, full organizational transparency. Methods: ongoing surveillance, not just point-in-time evaluation. Treaty-grade — analogous to IAEA safeguards for nuclear materials or PCAOB inspection cycles for public company audits. Requires an independent oversight body (the report recommends a PCAOB-for-AI structure) and potentially international treaty frameworks for cross-border AI development.
+
+## Why the AAL framework matters
+
+Prior governance discussions treated deep AI access as a binary (have it / don't have it), creating the [[wiki/findings/glass-box-evaluation-deadlock|glass-box evaluation deadlock]]. The AAL framework reframes this as a buildout problem with multiple waypoints — enabling regulatory requirements to be calibrated to current auditor capability while creating institutional pressure to advance the field. Requiring AAL-2 compliance now while piloting AAL-3 infrastructure creates a stepping-stone path rather than an all-or-nothing impasse.
+
+## Contradicted by / Tension with
+
+- The timeline estimates (AAL-3 by ~2027) are optimistic under current investment levels. Without a PCAOB-equivalent body to coordinate and fund auditor infrastructure, the institutional capacity for AAL-3 evaluations may not materialize on this timeline.
+- [[wiki/findings/sandbagging-detection-challenge|Sandbagging detection]] is an open problem that limits the reliability of even AAL-3 evaluations: if models can strategically underperform during audits, white-box access alone does not guarantee genuine assessment.
+
+## Relevant concepts
+
+[[wiki/definitions/frontier-ai-auditing|Frontier AI Auditing]], [[wiki/definitions/ai-assurance-level|AI Assurance Level (AAL)]], [[wiki/definitions/red-teaming|Red-Teaming (AI)]], [[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]]
 
 ---
 ## wiki/findings/ai-circumvents-identity-source-bias.md
@@ -1875,6 +2010,57 @@ The argument that the capability-accountability tradeoff is structural and histo
 ## Notes
 
 The SCOTUS trilogy finding is particularly important for U.S. AI governance: the same constitutional constraints that have historically limited agency regulatory capability apply to any federal AI regulatory body. An AI agency with genuine technical capacity may face legal challenges precisely because its expert judgments are not scrutably reviewable. This is not a theoretical risk — the EPA and SEC cases show courts are actively exercising this check.
+
+---
+## wiki/findings/capability-to-risk-conversion-framework.md
+
+---
+title: "Framework: Converting Capability Evaluations to Bioterrorism Risk Assessments"
+type: finding
+tags: [biosecurity, methodology, risk-assessment, capability-evaluation, dual-use, quantitative]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Dual-Use_AI_Capabilities_and_the_Risk_of_Bioterrorism.pdf"
+related:
+  - "[[wiki/findings/lone-wolf-bioterrorism-probability-ai-uplift|AI Uplift Could Substantially Raise Lone Wolf Bioterrorism Probability]]"
+  - "[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]]"
+  - "[[wiki/definitions/uplift|Uplift]]"
+  - "[[wiki/findings/benchmark-quality-gaps-undermine-governance|Benchmark Quality Gaps Undermine AI Governance]]"
+---
+
+## Claim
+
+Capability evaluation results — even rigorous ones — cannot directly inform high-stakes policy decisions because they do not answer the question regulators need answered: what is the overall societal risk? A structured framework combining qualitative domain expertise, quantitative probability modeling, and reference-class forecasting can bridge the capability-to-risk gap, even under high uncertainty.
+
+## Evidence
+
+- [Righetti, GovAI 2025]: Demonstrates a capability-to-risk conversion methodology using three components — (1) qualitative mapping of technical barriers to a specific threat model, (2) quantitative probability modeling drawing on historical base rates (prior bioterrorism attack attempts, success rates), and (3) structured expert elicitation from subject-matter experts and superforecasters to bound uncertainty ranges. → [[wiki/sources/righetti-2025-dual-use-ai-bioterrorism|Righetti 2025]]
+
+## Why this matters for AI governance
+
+AI safety governance currently operates primarily through **capability evaluations**: does this model exhibit dangerous capability X? But capability evaluations answer a necessary-but-not-sufficient question. Policymakers need to weigh the costs of restricting or delaying AI deployment against the benefit of risk reduction — a calculation that requires a probability, not just a binary capability assessment.
+
+Righetti's framework suggests that the relevant conversion requires:
+
+1. **Threat model scoping**: Narrow to a specific attacker profile and pathway (lone wolf epidemic, not all bioterrorism). Over-broad threat models make quantification impossible and produce unhelpful upper bounds.
+2. **Technical barrier identification**: Map the specific technical obstacles currently preventing the threat, and define AI capability thresholds that would erode each barrier.
+3. **Base rate anchoring**: Ground probability estimates in historical reference classes (how often have lone wolf bioterrorism attempts occurred? what was the success rate?).
+4. **Uplift quantification**: Express AI assistance as a concrete behavioral change (e.g., "X more STEM Bachelors can synthesize pathogen Y") rather than a vague capability label.
+5. **Expert and forecaster calibration**: Use structured elicitation from both domain experts and professional forecasters to triangulate uncertainty ranges.
+
+## Contradicted by / Tension with
+
+- The methodology depends on having meaningful base rate data for the threat model. For truly novel risks (no historical incidents), the base rate anchoring step is weak. Lone wolf bioterrorism has a thin historical record, making all estimates highly uncertain.
+- [[wiki/findings/benchmark-quality-gaps-undermine-governance|Benchmark quality gaps]] mean that the capability evaluation inputs to this framework may themselves be unreliable — garbage in, garbage out applies even to sophisticated conversion frameworks.
+
+## Relevant concepts
+
+[[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/uplift|Uplift]], [[wiki/definitions/red-teaming|Red-Teaming (AI)]]
+
+## Notes
+
+The methodology is a genuine contribution independent of the specific bioterrorism application. It provides a template for how to convert any AI dangerous capability evaluation into a policy-relevant risk estimate — applicable to cyberoffense, chemical weapons uplift, or other CBRN pathways, each of which would require separate threat-model scoping and base-rate analysis.
 
 ---
 ## wiki/findings/china-export-controls-as-ai-safety-risk.md
@@ -2934,6 +3120,69 @@ The EU and United States have taken structurally divergent approaches to AI regu
 The EU-US divergence is a key analytical lens for comparative AI governance courses. The analogy to the GDPR divergence in data protection is instructive: the EU enacted comprehensive legislation (GDPR 2018) while the U.S. has maintained a sectoral, voluntary approach — and the AI Act/U.S. AI governance gap follows a similar pattern.
 
 ---
+## wiki/findings/frontier-ai-auditing-seven-gaps.md
+
+---
+title: "Seven Dimensions Where Frontier AI Auditing Falls Short of Mature Assurance Regimes"
+type: finding
+tags: [auditing, frontier-ai, governance-mechanisms, third-party-assessment, gaps, technical-safety]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Frontier AI Auditing.pdf"
+related:
+  - "[[wiki/findings/ai-assurance-levels-framework|Four AI Assurance Levels (AALs): A Maturity Roadmap for Frontier AI Auditing]]"
+  - "[[wiki/definitions/frontier-ai-auditing|Frontier AI Auditing]]"
+  - "[[wiki/findings/glass-box-evaluation-deadlock|The Glass-Box Evaluation Deadlock]]"
+  - "[[wiki/findings/bipartisan-mandatory-ai-audits|Bipartisan Call for Mandatory AI Safety Audits]]"
+  - "[[wiki/findings/tiap-governance-infrastructure-gap|The Governance Infrastructure Gap]]"
+---
+
+## Claim
+
+Across seven dimensions — reporting transparency, access quality, methodological rigor, standardization, continuous monitoring, scope breadth, and auditor independence and scale — current frontier AI auditing practices fall substantially below every comparable mature assurance regime (financial auditing, nuclear, aviation, pharmaceutical), and in most dimensions below even early-stage equivalents in those sectors.
+
+## Evidence
+
+- [Brundage et al., January 2026]: Comparative analysis against mature assurance regimes including PCAOB financial auditing, IAEA nuclear safeguards, FAA aviation certification, and FDA pharmaceutical approval. → [[wiki/sources/brundage-2026-frontier-ai-auditing|Brundage et al. 2026]]
+
+## The Seven Dimensions
+
+**1. Reporting transparency**: AI developers publish minimal standardized information about safety evaluations — what was tested, by whom, with what methodology, what was found. Contrast with publicly available audit opinions in financial reporting, or published flight certification findings. Current AI practice: mostly internal reports; selective disclosure.
+
+**2. Access quality**: Third-party evaluators have almost no access to model internals, training data, or internal safety evaluations without developer cooperation. All meaningful current auditing is conducted with developer-controlled access. This maps to current AAL-1 limitations.
+
+**3. Methodological rigor**: No agreed-upon standards for what constitutes a valid AI safety evaluation. Evaluators use heterogeneous methods; results are not comparable across evaluators or over time. Financial auditing resolved this through GAAP/GAAS; AI auditing has no equivalent.
+
+**4. Standardization**: No mandatory standards for what AI safety properties must be evaluated, what pass/fail thresholds apply, or how results must be reported. NIST AI RMF is voluntary and framework-level, not audit-standard-level.
+
+**5. Continuous monitoring**: Current AI "audits" are point-in-time assessments; models change through fine-tuning, system prompt modifications, and deployment context changes without triggering re-evaluation. Mature regimes (nuclear, banking) embed continuous surveillance.
+
+**6. Scope breadth**: Most existing evaluations focus on one risk category (usually CBRN uplift or cybersecurity) and evaluate the model in isolation, not as deployed in a system. The report's [[wiki/findings/ai-assurance-levels-framework|three-lens framework]] (model, compute, governance) is almost never applied in current practice.
+
+**7. Auditor independence and scale**: The auditor community is small, largely funded by the audited companies, and without credential standards or professional licensing requirements. In financial auditing, PCAOB licenses auditors and can revoke licenses; in AI auditing, no equivalent body exists. The [[wiki/findings/ivo-financial-independence-tension|IVO financial independence tension]] — auditee pays — is maximally unresolved in current AI auditing.
+
+## Eight Recommendations to Close the Gaps
+
+1. Fund verification and auditing infrastructure (government grants for auditor tools and compute)
+2. Establish a PCAOB-equivalent oversight body for AI auditing
+3. Create an auditor accreditation program with professional standards
+4. Enact safe harbors for good-faith third-party testing
+5. Clarify AI insurance coverage to create market incentives for audit engagement
+6. Embed auditing requirements in government procurement contracts
+7. Build an Auditability R&D portfolio (interpretability, monitoring, evaluation methodology)
+8. Pilot AAL-3 and AAL-4 evaluations now before regulatory mandates force rushed implementation
+
+## Contradicted by / Tension with
+
+- The [[wiki/findings/tiap-governance-infrastructure-gap|TIAP 2026 governance infrastructure gap]] finding reached similar conclusions from a different angle (policy-grade evaluations fail validity/reliability tests), suggesting convergence on the diagnosis.
+- The eight recommendations implicitly assume state capacity to establish and fund a PCAOB-equivalent body — politically challenging in the current US deregulatory environment. The [[wiki/sources/wh-mythos-model-vetting-debate-may2026|Mythos vetting debate]] shows even the Trump administration is feeling pressure to develop oversight capacity, suggesting a window.
+
+## Relevant concepts
+
+[[wiki/definitions/frontier-ai-auditing|Frontier AI Auditing]], [[wiki/definitions/ai-assurance-level|AI Assurance Level (AAL)]], [[wiki/definitions/independent-verification-organization|Independent Verification Organization (IVO)]], [[wiki/definitions/management-based-regulation|Management-based Regulation]]
+
+---
 ## wiki/findings/frontier-cbrn-capability-threshold-reached.md
 
 ---
@@ -3267,6 +3516,99 @@ The harms paradigm is not wrong — it addresses real harms. The critique is tha
 The proposed practical response is the RIA framework — a 15-question structured questionnaire for policymakers to assess AI's impacts on their domain's regulatory targets and tools, applicable across sectors and designed for periodic re-use as AI capabilities evolve. The nuclear energy case study (CNSC) demonstrates that this applies to government safety regulators as much as to commercial sector regulators.
 
 ---
+## wiki/findings/investor-ai-governance-barriers.md
+
+---
+title: "Investor Barriers to AI Governance Engagement"
+type: finding
+tags: [investors, investor-stewardship, financial-materiality, ai-governance, engagement]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/The-Role-of-Investors-in-AI-Governance-Oxford-AIGI-FINAL-130426.pdf"
+related:
+  - "[[wiki/findings/investor-stewardship-investment-team-split|Investor Stewardship vs. Investment Team: Structural Split in AI Governance]]"
+  - "[[wiki/findings/principle-to-practice-gap-responsible-ai|Principle-to-Practice Gap in Responsible AI Governance]]"
+  - "[[wiki/findings/ashby-institutional-adaptation-dominant-constraint|Institutional Adaptation as Dominant Constraint on AI Deployment]]"
+---
+
+## Claim
+
+Institutional investors represent a structurally underutilized AI governance lever, blocked by four barriers: thin AI expertise in stewardship functions, absence of shared evaluation frameworks, uncertain financial materiality within investment time horizons, and concern that safety engagement will be read as anti-AI by investment teams and clients.
+
+## Evidence
+
+- [Oxford AIGI, Fitzjohn-Sykes 2026]: Six roundtables with 62 institutional investors and 60 interviews across 12 countries consistently surfaced these four barriers as the primary obstacles to more active investor AI governance engagement → [[wiki/sources/oxford-aigi-investor-ai-governance-2026|Oxford AIGI Report]]
+
+## Investors' stated asks to bridge the gaps
+
+The report identified six specific ecosystem-level interventions investors said would catalyze their engagement:
+
+1. **Sector-specific AI risk management guidance** — investors need to know which AI risks are material in which sectors (healthcare AI liability vs. finance model risk vs. autonomous systems)
+2. **Sector materiality map** — clear mapping of where AI risk is already financially significant by industry vertical
+3. **Investor AI resource hub** — centralized knowledge infrastructure (analogous to SASB standards for ESG more broadly)
+4. **Collective engagement coordination** — like the Net Zero Asset Managers initiative model; individual investors feel they lack standing to push alone
+5. **Asset owner demand catalysis** — pension funds (asset owners) pushing asset managers who push boards; currently asset owners are not asking their managers to engage on AI
+6. **Company-level analysis tools** — equivalent to ESG scoring but for AI governance quality at portfolio companies
+
+## Contradicted by / Tension with
+
+- The report's optimism about investor leverage contrasts with the [[wiki/findings/governance-by-procurement|governance by procurement]] finding: bilateral financial relationships have consistently failed as substitutes for public law governance — investors may be better than nothing but are structurally inadequate as primary governance actors.
+- There is some tension between the investor ask for "sector materiality maps" and the current state of [[wiki/definitions/foundation-model-transparency-index|foundation model transparency]], which is declining — investors cannot assess AI governance quality at companies that disclose less each year.
+
+## Relevant concepts
+
+[[wiki/definitions/frontier-ai|Frontier AI]], [[wiki/definitions/responsible-ai-governance|Responsible AI Governance]], [[wiki/definitions/management-based-regulation|Management-based Regulation]]
+
+## Notes
+
+The investor perspective also highlights a tension that recurs in governance discussions: stewardship teams engage on governance but lack technical AI knowledge; investment teams have financial modeling capability but are not focused on safety externalities. This mirrors the [[wiki/findings/principle-to-practice-gap-responsible-ai|principle-to-practice gap]] documented in responsible AI governance literature, where the people who write principles are not the people who implement systems.
+
+---
+## wiki/findings/investor-stewardship-investment-team-split.md
+
+---
+title: "Investor Stewardship vs. Investment Team: Structural Split in AI Governance"
+type: finding
+tags: [investors, investor-stewardship, ai-governance, financial-materiality, organizational-structure]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/The-Role-of-Investors-in-AI-Governance-Oxford-AIGI-FINAL-130426.pdf"
+related:
+  - "[[wiki/findings/investor-ai-governance-barriers|Investor Barriers to AI Governance Engagement]]"
+  - "[[wiki/findings/principle-to-practice-gap-responsible-ai|Principle-to-Practice Gap in Responsible AI Governance]]"
+---
+
+## Claim
+
+Within institutional investors, stewardship teams (ESG engagement, proxy voting, board-level governance dialogue) and investment teams (stock selection, financial analysis) interact with AI risk through entirely different functions and incentives — a structural split that prevents integrated AI governance engagement.
+
+## Evidence
+
+- [Oxford AIGI, Fitzjohn-Sykes 2026]: Systematic finding across 62 investors in 12 countries. Investment teams are already pricing AI competitive risk and opportunity into valuations. Stewardship teams are only beginning to develop AI engagement frameworks and lack technical support. The two teams rarely coordinate on AI. → [[wiki/sources/oxford-aigi-investor-ai-governance-2026|Oxford AIGI Report]]
+
+## Why the split matters for governance
+
+The stewardship team is the primary channel through which investors could exert governance pressure on AI developers and deployers — through board-level engagement, shareholder resolutions, voting against management on governance failures, and investor letters. But stewardship teams lack the AI technical capacity to evaluate what good AI governance looks like at portfolio companies. Meanwhile, investment teams have that analytical capacity but are not tasked with governance engagement.
+
+The report's key strategic implication: the most achievable near-term intervention is not to solve the expertise gap in stewardship teams but to provide them with external frameworks simple enough to use as engagement tools — analogous to how ESG frameworks gave generalist stewardship teams a handle on climate risk without requiring them to become climate scientists.
+
+A second implication: **deployer engagement is more tractable than developer engagement**. AI developers (Anthropic, Google DeepMind, OpenAI) are lightly traded and often have governance structures insulated from investor pressure (dual-class shares, non-profit parent structures). AI deployers — companies in finance, healthcare, enterprise software, logistics — have mainstream board structures and are extensively traded by the same institutional investors already engaged on ESG.
+
+## Contradicted by / Tension with
+
+- The deployer-focus recommendation diverges from virtually all existing governance frameworks, which address developers. If investors engage primarily with deployers while regulators focus on developers, a governance gap at the deployer layer could persist.
+
+## Relevant concepts
+
+[[wiki/definitions/responsible-ai-governance|Responsible AI Governance]], [[wiki/definitions/management-based-regulation|Management-based Regulation]]
+
+## Notes
+
+The stewardship/investment split is an instance of a broader organizational pattern the wiki has documented: the people responsible for safety governance are structurally separated from the people with the relevant technical expertise. The [[wiki/findings/principle-to-practice-gap-responsible-ai|principle-to-practice gap]] in responsible AI governance shows the same pattern inside AI companies themselves.
+
+---
 ## wiki/findings/ivo-financial-independence-tension.md
 
 ---
@@ -3381,6 +3723,64 @@ The symmetric finding implies debunking LLMs could be deployed as effective coun
 The standard-guardrails failure is the most governance-relevant finding: it demonstrates that RLHF safety training does not prevent LLMs from being deployed in epistemically harmful configurations — the bunking system prompt did not require jailbreaking in the full experiment, only a framing that encouraged the model to argue persuasively for a position. This connects to [[wiki/findings/sycophantic-ai-increases-extremity|sycophancy-induced extremity]]: the bunking-style deployment (validate the user's existing conspiracy beliefs) is precisely the mode sycophancy-optimized models would drift toward. The debrief finding is a concrete policy implication: platform-level disclosure ("this AI was configured to argue for X") could be a low-cost harm-reduction tool analogous to sponsored-content labeling.
 
 ---
+## wiki/findings/lone-wolf-bioterrorism-probability-ai-uplift.md
+
+---
+title: "AI Uplift Could Substantially Raise Lone Wolf Bioterrorism Probability"
+type: finding
+tags: [biosecurity, dual-use, bioterrorism, uplift, risk-assessment, cbrn, quantitative]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Dual-Use_AI_Capabilities_and_the_Risk_of_Bioterrorism.pdf"
+related:
+  - "[[wiki/findings/capability-to-risk-conversion-framework|Framework: Converting Capability Evaluations to Bioterrorism Risk Assessments]]"
+  - "[[wiki/definitions/uplift|Uplift]]"
+  - "[[wiki/findings/converging-risk-domains-bio-cyber-autonomy|Convergence on Biosecurity, Cybersecurity, and Autonomy as Priority Risk Domains]]"
+  - "[[wiki/findings/frontier-cbrn-capability-threshold-reached|Frontier AI CBRN Capability Threshold Reached]]"
+---
+
+## Claim
+
+If AI systems were to provide simultaneous uplift on virus synthesis (enabling 10 percentage points more STEM Bachelors to synthesize pathogens as complex as influenza) and operational attack planning (enabling design and execution of complex attacks circumventing current defenses), the annual probability of a lone wolf epidemic attack might rise from 0.15% to approximately 1.0% — equivalent to roughly 12,000 additional expected deaths per year, or ~$100B in annual expected harm.
+
+## Evidence
+
+- [Righetti, GovAI 2025]: Framework applying historical case studies, expert elicitation (6 subject-matter experts), and reference-class forecasting (5 superforecasters). Author's estimates show 5th–95th percentile range spanning multiple orders of magnitude; expert and forecaster medians similar to author's 50th percentile estimates, but all forecasts have high uncertainty. → [[wiki/sources/righetti-2025-dual-use-ai-bioterrorism|Righetti 2025]]
+
+## Structure of the risk model
+
+The 0.15% → 1.0% shift is conditioned on simultaneous threshold crossings in two of three technical barriers:
+
+**Barrier 1 — Virus Discovery**: AI identifying epidemic-potential pathogens (novel virus discovery or sensitive information proliferation). Scenarios including this barrier reach substantially higher expected damages than synthesis/ops uplift alone.
+
+**Barrier 2 — AI Lab Coach**: AI teaching specialized virus synthesis skills including troubleshooting laboratory procedures. The 10pp STEM Bachelor threshold is the specific benchmark used in the central scenario.
+
+**Barrier 3 — AI Ops Coach**: AI helping design complex operational attack plans — circumventing DNA synthesis screening, avoiding law enforcement detection.
+
+The central scenario (synthesis + ops, no virus discovery) generates the 0.15% → 1.0% estimate. Adding virus discovery capability pushes expected damages into a higher range that the author's chart shows exceeding 1M expected annual deaths in the 95th percentile scenario.
+
+## Scope limitations (critical)
+
+This finding applies **only** to lone wolf epidemic terrorism — individual actors or very small groups engineering epidemic-scale pathogens. It explicitly excludes:
+- Anthrax-class attacks (different technical barriers and attacker profile)
+- State biological weapons programs (different resource base, intent, infrastructure)
+These other threat models require separate quantitative analysis.
+
+## Contradicted by / Tension with
+
+- High uncertainty across all estimates means the central figure (12,000 deaths/year) should be read as an order-of-magnitude estimate, not a precise forecast. The 5th–95th percentile range spans orders of magnitude.
+- The [[wiki/findings/frontier-cbrn-capability-threshold-reached|Ball-Buchanan documentation]] (May 2026) that GPT-5.4 outperforms PhD virologists in some domains suggests the capability thresholds in Righetti's central scenario may already be partially crossed — meaning the 0.15% baseline probability may already be under pressure.
+
+## Relevant concepts
+
+[[wiki/definitions/uplift|Uplift]], [[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/dual-use-foundation-model|Dual-Use Foundation Model]]
+
+## Notes
+
+The $100B annual expected harm figure uses standard value-of-statistical-life methodology. The comparison across scenarios (synthesis-only vs. synthesis+ops vs. synthesis+ops+discovery) shows that virus discovery capability is the largest risk multiplier — raising expected deaths by a factor of roughly 100 over the synthesis+ops baseline in the median scenario.
+
+---
 ## wiki/findings/multi-agent-governance-gap.md
 
 ---
@@ -3420,6 +3820,68 @@ The FAR AI / CSA Singapore agentic security paper ([[wiki/sources/securing-agent
 ## Notes
 
 The 24% → 65% rise in MCP action-taking tools over ~14 months is the most concrete empirical data point in the wiki for the pace of agentic deployment. It implies that the multi-agent governance gap is closing fast — not in the sense of being addressed, but in the sense that the window for addressing it before large-scale deployment is narrowing.
+
+---
+## wiki/findings/mythos-moment-model-vetting-debate.md
+
+---
+title: "The Mythos Moment: Trump White House Debates Pre-Release AI Model Vetting"
+type: finding
+tags: [us-policy, pre-release-vetting, frontier-ai, cybersecurity, trump-second-term, mythos, anthropic]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/White House Considers Vetting A.I. Models Before They Are Released.md"
+  - "raw/White House distances itself from tighter AI regulation.md"
+related:
+  - "[[wiki/findings/frontier-cbrn-capability-threshold-reached|Frontier AI CBRN Capability Threshold Reached]]"
+  - "[[wiki/findings/bipartisan-mandatory-ai-audits|Bipartisan Call for Mandatory AI Safety Audits]]"
+  - "[[wiki/findings/ai-assurance-levels-framework|Four AI Assurance Levels (AALs)]]"
+  - "[[wiki/sources/brundage-2026-frontier-ai-auditing|Frontier AI Auditing (Brundage et al., 2026)]]"
+  - "[[wiki/findings/ashby-trust-infrastructure-adoption-prerequisite|Trust Infrastructure as Prerequisite for AI Adoption]]"
+---
+
+## Claim
+
+In May 2026, Anthropic's Claude Mythos Preview — judged too powerful to release publicly due to its cybersecurity vulnerability-finding capability — forced even the deregulatory Trump White House into internal debate over pre-release AI model vetting, producing a three-day policy whiplash that revealed genuine elite disagreement about frontier AI governance even within a nominally anti-regulatory administration.
+
+## Evidence
+
+- [NYT, Mickle et al., May 4 2026]: Administration discussing EO creating AI working group; officials briefed Anthropic, Google, OpenAI executives; UK-style model safety evaluation as potential template. → [[wiki/sources/wh-mythos-model-vetting-debate-may2026|WH Mythos Vetting Debate]]
+- [Politico, Sakellariadis et al., May 7 2026]: Senior White House officials walk back NEC Director Hassett's FDA drug-approval comparison; Wiles tweet; CAISI voluntary agreements with Google DeepMind, xAI, Microsoft; OpenAI announces GPT-5.5-Cyber limited preview. → [[wiki/sources/wh-mythos-model-vetting-debate-may2026|WH Mythos Vetting Debate]]
+
+## The triggering event
+
+Anthropic announced Claude Mythos Preview with an unusual claim: the model is so effective at identifying software vulnerabilities that Anthropic judged it unsafe to release publicly. Instead, Mythos was shared exclusively with a limited set of tech and security organizations, so they could patch critical vulnerabilities before malicious actors exploited them. This made Mythos simultaneously a showcase of frontier capability and a demonstration that capability thresholds with direct safety implications had been crossed.
+
+NSA was already using Mythos to assess U.S. government software vulnerabilities. Federal agencies generally wanted access. But the Anthropic-Pentagon dispute (DOD designated Anthropic a "supply chain risk" after Anthropic refused to allow autonomous lethal targeting uses; Anthropic sued) created a live legal conflict that complicated any rational procurement or governance response.
+
+## The whiplash
+
+**May 4**: NYT reports the administration is actively considering a formal pre-release government review process for AI models. White House officials briefed tech executives. UK's model safety evaluation system mentioned as a potential template.
+
+**May 6**: NEC Director Kevin Hassett, on Fox Business, compared the potential review to FDA drug approval — "released into the wild after they've been proven safe, just like an FDA drug." This alarmed industry, which heard it as signaling yearslong pre-market approval timelines.
+
+**May 7**: Senior White House officials told reporters Hassett was "taken out of context a little bit" and that the White House sought "partnership" not "regulation." Chief of Staff Wiles tweeted that the government is "not in the business of picking winners and losers."
+
+The whiplash pattern — significant action contemplated, then walked back under industry pressure — is consistent with the broader second-term pattern: genuine internal tension between competitiveness-first and safety-concerned factions, resolved in public toward the competitiveness frame.
+
+## What actually happened
+
+CAISI (Center for AI Standards and Innovation, Commerce Dept.) — which had been sidelined under Trump — announced voluntary safety-testing agreements with Google DeepMind, xAI, and Microsoft during the same week. OpenAI announced GPT-5.5-Cyber with similar limited-preview structure to Mythos. The net result: voluntary industry-driven coordination around the most dangerous capability class (cyberoffense), backstopped by a Commerce body, without mandatory pre-release oversight.
+
+## Why this matters
+
+The Mythos moment is the first documented case of a concrete frontier AI capability — not a hypothetical — forcing a US administration's hand toward discussing pre-release oversight. It demonstrates that the [[wiki/definitions/collingridge-dilemma|Collingridge Dilemma]] has a political dimension: governance pressure increases precisely when capability crosses a threshold visible enough to generate political risk (a devastating AI-enabled cyberattack the White House failed to anticipate). Whether the CAISI voluntary-agreements pathway is adequate to that risk is the open question.
+
+## Contradicted by / Tension with
+
+- The voluntary CAISI pathway is structurally similar to the pre-Biden status quo, which the Ball-Buchanan bipartisan analysis called inadequate. Voluntary coordination cannot substitute for mandatory pre-release assessment if the goal is preventing catastrophic first uses of dangerous capabilities.
+- OpenAI's simultaneous GPT-5.5-Cyber announcement signals competitive pressure against Anthropic's limited-release approach — suggesting that if one lab withholds a dangerous capability, rivals will announce equivalents, undermining the safety logic of limited release.
+
+## Relevant concepts
+
+[[wiki/definitions/frontier-ai|Frontier AI]], [[wiki/definitions/dangerous-capability-evaluation|Dangerous Capability Evaluation]], [[wiki/definitions/collingridge-dilemma|Collingridge Dilemma]]
 
 ---
 ## wiki/findings/nonphysical-asset-governance-challenge.md
@@ -4457,6 +4919,59 @@ None requiring new definition pages.
 ## Notes
 
 Congressman Bill Foster (TIAP 2026 keynote): AI policy currently routes through seven House committees and the U.S. still lacks a standing IT committee even as information technology has overtaken financial services as a share of GDP. The institutional deficit extends from evaluation infrastructure all the way to legislative infrastructure.
+
+---
+## wiki/findings/trump-eo-state-ai-preemption.md
+
+---
+title: "Trump Second-Term Federal Preemption Campaign Against State AI Governance"
+type: finding
+tags: [us-policy, federal-preemption, state-ai-law, trump-second-term, executive-order]
+created: 2026-05-12
+updated: 2026-05-12
+sources:
+  - "raw/Ensuring a National Policy Framework for Artificial Intelligence.md"
+related:
+  - "[[wiki/findings/white-house-preemption-pressure-state-ai|White House Preemption Pressure: Federal Veto of State AI Safety Legislation]]"
+  - "[[wiki/findings/connecticut-sb5-legislative-narrowing|CT SB 5: Legislative Narrowing as Enactment Strategy]]"
+  - "[[wiki/findings/eu-us-regulatory-divergence|EU-US Regulatory Divergence on AI]]"
+  - "[[wiki/findings/state-ai-legislation-2026-wave|State AI Legislation: 2026 Wave]]"
+---
+
+## Claim
+
+The December 11, 2025 executive order on "Ensuring a National Policy Framework for Artificial Intelligence" formalizes a multi-vector federal preemption campaign against state AI governance: DOJ litigation threats, Commerce Dept. evaluation of "onerous" laws, BEAD broadband funding conditionality, FTC preemption theory, and a mandate for federal legislation — creating the most aggressive federal executive branch action against state AI regulation in U.S. history.
+
+## Evidence
+
+- [EO December 11, 2025]: Signed by President Trump; creates AI Litigation Task Force (30-day deadline), Commerce Dept. evaluation of state AI laws (90-day deadline), BEAD funding conditions, FCC preemption proceeding, FTC policy statement, legislative recommendation mandate. → [[wiki/sources/trump-eo-state-ai-preemption-dec2025|Trump EO State AI Preemption (Dec 2025)]]
+
+## The preemption toolkit
+
+The order deploys five distinct mechanisms simultaneously, creating overlapping pressure on state legislators:
+
+**Litigation threat**: The AI Litigation Task Force is directed to challenge state AI laws on Commerce Clause grounds (interstate commerce), preemption grounds (federal laws already regulate), or other grounds the AG determines. This gives state legislatures credible reason to believe that even bills that pass will face costly federal litigation.
+
+**Commerce Dept. blacklist**: Commerce must identify "onerous" state AI laws within 90 days. The evaluation criteria are legally aggressive: laws are "onerous" if they require AI models to "alter their truthful outputs" (targeting anti-discrimination requirements) or mandate disclosure that "would violate the First Amendment" (targeting transparency requirements). Both characterizations are legally contested.
+
+**BEAD conditionality**: States with identified "onerous AI laws" become ineligible for non-deployment BEAD program funds — a broadband infrastructure program worth hundreds of millions per state. This creates a direct financial penalty for state AI regulation, leveraging an unrelated program.
+
+**FTC preemption**: The FTC is directed to issue a policy statement arguing that state laws requiring AI model output alterations are preempted by the FTC Act's prohibition on unfair and deceptive acts — i.e., anti-discrimination requirements are recharacterized as mandating deception.
+
+**Legislative mandate**: The Special Advisor for AI and Crypto and the OSTP director are directed to prepare a legislative recommendation for a uniform federal framework with explicit preemption of conflicting state laws. Carve-outs: child safety, compute infrastructure, state government's own AI use.
+
+## Historical significance
+
+The [[wiki/findings/white-house-preemption-pressure-state-ai|Utah chatbot bill episode]] showed informal executive pressure could kill state AI legislation; this order institutionalizes that pressure into standing legal and funding mechanisms. The DOJ Task Force in particular represents federal executive power directly weaponized against state AI safety legislation — an unprecedented deployment of the federal litigation apparatus for this purpose.
+
+## Contradicted by / Tension with
+
+- The carve-out for child safety protections will likely insulate legislation like CT SB 5's AI companion framework from challenge, even as the order targets the discrimination provisions.
+- The FTC preemption theory (anti-discrimination = mandate for deception) directly inverts the EU's regulatory logic: what Brussels requires (bias correction), Washington now treats as a federal violation. This extends the [[wiki/findings/eu-us-regulatory-divergence|EU-US regulatory divergence]] from philosophical disagreement to active legal conflict at the state level.
+
+## Relevant concepts
+
+[[wiki/definitions/regulatory-markets|Regulatory Markets]], [[wiki/definitions/command-and-control-regulation|Command-and-Control Regulation]]
 
 ---
 ## wiki/findings/us-executive-ai-governance-reversal-2025.md

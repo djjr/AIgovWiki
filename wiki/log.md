@@ -8,6 +8,31 @@ grep "^## \[" wiki/log.md | head -10
 
 ---
 
+## [2026-05-12] wiki-run | 4 source batches — Oxford AIGI investors, GovAI dual-use bioterrorism, Frontier AI Auditing, White House AI policy cluster
+
+- **Files processed (6 raw sources → 7 source pages):**
+  - Oxford AIGI investor governance report (April 2026, Fitzjohn-Sykes) → `wiki/sources/oxford-aigi-investor-ai-governance-2026`
+  - GovAI dual-use bioterrorism report — exec summary only (2025, Righetti) → `wiki/sources/righetti-2025-dual-use-ai-bioterrorism`
+  - Frontier AI Auditing pp. 1–54 (January 2026, Brundage et al., 28 authors) → `wiki/sources/brundage-2026-frontier-ai-auditing`
+  - Trump WH AI.gov first-term archive → `wiki/sources/trump-wh-ai-first-term-overview`
+  - Trump EO December 11 2025 (state preemption) → `wiki/sources/trump-eo-state-ai-preemption-dec2025`
+  - NYT + Politico May 2026 (Mythos vetting debate, treated as cluster) → `wiki/sources/wh-mythos-model-vetting-debate-may2026`
+- **New findings created (8):**
+  - `investor-ai-governance-barriers` — four structural barriers to investor AI governance engagement
+  - `investor-stewardship-investment-team-split` — structural split between stewardship and investment functions
+  - `lone-wolf-bioterrorism-probability-ai-uplift` — AI uplift: 0.15% → 1.0% annual epidemic attack probability
+  - `capability-to-risk-conversion-framework` — methodology for converting capability evals to risk assessments
+  - `ai-assurance-levels-framework` — four AALs (AAL-1 through AAL-4) maturity roadmap
+  - `frontier-ai-auditing-seven-gaps` — seven dimensions where AI auditing falls short of mature assurance regimes
+  - `trump-eo-state-ai-preemption` — multi-vector federal preemption campaign against state AI governance
+  - `mythos-moment-model-vetting-debate` — May 2026 White House internal debate on pre-release AI vetting
+- **New definitions created (5):**
+  - `frontier-ai-auditing` — rigorous third-party evaluation + verification requiring deep non-public access
+  - `ai-assurance-level` (AAL) — four-tier auditor maturity framework; acronym registered
+  - `lone-wolf-epidemic-terrorism` — specific bioterrorism threat model scoped by Righetti
+  - `investor-stewardship` — ESG/governance engagement function within institutional asset managers
+- **Index:** 216 → 232 pages total (7 sources + 8 findings + 5 definitions = +20; minus the 4 already counted: net +20 new pages)
+
 ## [2026-05-08] lint | stub-notes glossarization assessment
 
 - **Stubs assessed:** ~28 files in raw/ with Obsidian-style tags (type/moc, type/concept)
